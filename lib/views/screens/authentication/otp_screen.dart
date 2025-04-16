@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/otp_controller.dart';
-import 'package:syntic_earth/views/screens/password_screen.dart';
-import 'package:syntic_earth/views/screens/welcome_screen.dart';
+import 'package:syntic_earth/views/screens/authentication/password_screen.dart';
+import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 
 class Otpscreen extends StatelessWidget {

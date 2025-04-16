@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/screens/login_screen.dart';
-import 'package:syntic_earth/views/screens/signup_screen.dart';
+import 'package:syntic_earth/views/screens/authentication/login_screen.dart';
+import 'package:syntic_earth/views/screens/authentication/signup_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 
 class WelcomeScreen extends StatelessWidget {
