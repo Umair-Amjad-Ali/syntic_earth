@@ -5,6 +5,7 @@ class TextfieldController extends GetxController {
   var isConfirmPasswordVisibility = false.obs;
   var checkBoxValue = true.obs;
   var isPasswordsMatching = false.obs;
+  var selectedIndex = 0.obs;
   void togglePasswordVisibility() {
     isPasswordVisible.value = !isPasswordVisible.value;
   }

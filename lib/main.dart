@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
+import 'package:syntic_earth/views/screens/home_screen.dart';
+// import 'package:syntic_earth/views/screens/marketplace_screen.dart';
+// import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
+// import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WalletManagement(), // Change this to your desired screen
+      home: HomeScreen(), // Change this to your desired screen
     );
   }
 }
