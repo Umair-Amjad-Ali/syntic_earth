@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.17
   flutter_otp_text_field: ^1.5.1+1
   get: ^4.7.2
+  google_maps_flutter: ^2.12.1
 
 dev_dependencies:
   flutter_test:

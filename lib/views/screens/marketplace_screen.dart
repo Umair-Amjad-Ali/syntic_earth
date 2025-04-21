@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
-// import 'package:syntic_earth/views/screens/wallet/transfer_management.dart';
-// import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appBar.dart';
-// import 'package:syntic_earth/views/widgets/custom_bottom_navbar.dart';
 import 'package:syntic_earth/views/widgets/marketplace_card.dart';
 
 class MarketplaceScreen extends StatelessWidget {
@@ -12,14 +9,6 @@ class MarketplaceScreen extends StatelessWidget {
   final TextfieldController textfieldController = Get.put(
     TextfieldController(),
   );
-
-  //   final List<Widget> _screens = [
-  //   MarketplaceScreen(),
-  //   WalletManagement(),
-  //   TransferScreen(),
-  //   WalletManagement(),
-  //   MarketplaceScreen(),
-  // ];
 
   final List<Map<String, dynamic>> marketplaceData = [
     {
@@ -123,14 +112,6 @@ class MarketplaceScreen extends StatelessWidget {
           ),
         ],
       ),
-      // bottomNavigationBar: Obx(
-      //   () => CustomBottomNavbar(
-      //     selectedIndex: textfieldController.selectedIndex.value,
-      //     onTap: (index) {
-      //       textfieldController.selectedIndex.value = index;
-      //     },
-      //   ),
-      // ),
     );
   }
 }
