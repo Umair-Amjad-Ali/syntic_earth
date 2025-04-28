@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/screens/map_screen.dart';
+import 'package:syntic_earth/views/widgets/map_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_map_screen_appbar.dart';
 
 class GoogleMapScreen extends StatelessWidget {

@@ -23,7 +23,6 @@ class Inputfield extends StatelessWidget {
     this.toggleVisibility,
     this.isPasswordVisibility = false,
     this.obsecuretext = false,
-
   });
 
   final TextfieldController textfieldController = Get.put(
@@ -77,7 +76,7 @@ class Inputfield extends StatelessWidget {
                   ),
                   onPressed: toggleVisibility,
                 )
-                : null,
+                : sufficon,
         suffixIconColor: sufficoncolor,
 
         hintStyle: TextStyle(

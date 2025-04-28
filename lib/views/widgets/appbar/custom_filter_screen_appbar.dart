@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+import 'package:syntic_earth/views/widgets/textfield.dart';
+
+class CustomFilterScreenAppbar extends StatelessWidget
+    implements PreferredSizeWidget {
+  final bool showIcon;
+  const CustomFilterScreenAppbar({super.key, this.showIcon = true});
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60);
+  @override
+  Widget build(BuildContext context) {
+    Size mediaQuery = MediaQuery.of(context).size;
+    return Container(
+      color: Color(0xFF151624),
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Expanded(
+                child: Inputfield(
+                  hinttext: "Search",
+                  sufficon: Icon(Icons.search),
+                  sufficoncolor: Colors.white,
+                ),
+              ),
+              SizedBox(width: mediaQuery.width * 0.01),
+              if (showIcon) ...[
+                Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xff313150),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: IconButton(
+                    color: Colors.white,
+                    icon: const Icon(Icons.keyboard_arrow_up),
+                    onPressed:
+                        () {}, // You can handle collapse/filter hide here
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appBar.dart';
+import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 
 class TransferScreen extends StatefulWidget {
   const TransferScreen({super.key});

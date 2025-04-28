@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syntic_earth/controllers/utils/models/trasnsaction.dart';
 import 'package:syntic_earth/views/screens/wallet/transfer_management.dart';
-import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appBar.dart';
+import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/transaction_tile.dart';
 import 'package:syntic_earth/views/widgets/wallet_action_button.dart';
 

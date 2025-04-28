@@ -1,7 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 
-class CustomWalletAppBar extends StatelessWidget {
+class CustomWalletAppBar extends StatelessWidget  {
   const CustomWalletAppBar({
     super.key,
     required this.title,

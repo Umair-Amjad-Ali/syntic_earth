@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
-import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appBar.dart';
+import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/marketplace_card.dart';
 
 class MarketplaceScreen extends StatelessWidget {
