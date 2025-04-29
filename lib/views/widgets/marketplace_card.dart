@@ -21,7 +21,7 @@ class MarketplaceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 6,
-      shadowColor: Colors.white.withOpacity(0.6),
+      shadowColor: Colors.white.withAlpha(153),
       color: const Color(0xFF1B1C2B),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),

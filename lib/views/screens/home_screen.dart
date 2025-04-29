@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
+import 'package:syntic_earth/views/screens/google_map_screen.dart';
 import 'package:syntic_earth/views/screens/marketplace_screen.dart';
 import 'package:syntic_earth/views/screens/wallet/transfer_management.dart';
 import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
     MarketplaceScreen(),
     WalletManagement(),
     TransferScreen(),
-    CustomMapScreenAppbar(title: "Syntic Earth"),
+    GoogleMapScreen(),
     MarketplaceScreen(),
   ];
   @override

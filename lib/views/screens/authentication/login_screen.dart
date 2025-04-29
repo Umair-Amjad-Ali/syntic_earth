@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
 import 'package:syntic_earth/views/screens/authentication/signup_screen.dart';
-import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
+import 'package:syntic_earth/views/screens/home_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 import 'package:syntic_earth/views/widgets/textfield.dart';
 
@@ -85,9 +85,7 @@ class LoginScreen extends StatelessWidget {
                         // If form is valid, proceed
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const WelcomeScreen(),
-                          ),
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
                         );
                       }
                     },

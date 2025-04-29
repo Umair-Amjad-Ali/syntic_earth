@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syntic_earth/controllers/utils/models/trasnsaction.dart';
+import 'package:syntic_earth/views/screens/filter_screen.dart';
 import 'package:syntic_earth/views/screens/wallet/transfer_management.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/transaction_tile.dart';
@@ -123,7 +124,14 @@ class WalletManagement extends StatelessWidget {
                             children: [
                               WalletActionButton(
                                 label: "Add Cash",
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => FilterScreen(),
+                                    ),
+                                  );
+                                },
                               ),
                               WalletActionButton(
                                 label: "Cash Out",
