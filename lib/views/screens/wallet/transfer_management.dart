@@ -51,7 +51,7 @@ class _TransferScreenState extends State<TransferScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: height * 0.02),
+                    // SizedBox(height: height * 0.02),
 
                     // Amount Display
                     FittedBox(
@@ -78,27 +78,30 @@ class _TransferScreenState extends State<TransferScreen> {
 
                     // Number Pad
                     Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          for (int i = 0; i < 3; i++)
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            for (int i = 0; i < 3; i++)
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: List.generate(3, (j) {
+                                  int num = i * 3 + j + 1;
+                                  return _buildKey("$num", width);
+                                }),
+                              ),
+                            SizedBox(height: height * 0.015),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: List.generate(3, (j) {
-                                int num = i * 3 + j + 1;
-                                return _buildKey("$num", width);
-                              }),
+                              children: [
+                                _buildKey("0", width),
+                                _buildKey(".", width),
+                                _buildKey("back", width),
+                              ],
                             ),
-                          SizedBox(height: height * 0.015),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              _buildKey("0", width),
-                              _buildKey(".", width),
-                              _buildKey("back", width),
-                            ],
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
 

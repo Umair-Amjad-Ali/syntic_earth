@@ -54,6 +54,7 @@ class Otpscreen extends StatelessWidget {
                     child: FittedBox(
                       child: OtpTextField(
                         numberOfFields: 4,
+
                         focusedBorderColor: const Color(0xff0AF9E6),
                         borderColor:
                             otpController.isError.value

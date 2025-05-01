@@ -41,7 +41,7 @@ class Buttonwidget extends StatelessWidget {
               color: borderColor ?? Colors.transparent,
               width: 2,
             ),
-            borderRadius: BorderRadius.circular(7),
+            borderRadius: BorderRadius.circular(mediaQuery.width * 0.022),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +61,6 @@ class Buttonwidget extends StatelessWidget {
                   style:
                       textStyle ??
                       TextStyle(
-                        // fontWeight: FontWeight.bold,
                         fontSize: mediaQuery.height * 0.025,
                         color: borderColor ?? Colors.black,
                       ),

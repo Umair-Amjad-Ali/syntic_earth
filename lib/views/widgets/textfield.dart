@@ -50,21 +50,30 @@ class Inputfield extends StatelessWidget {
     return TextFormField(
       controller: controller,
       validator: _validate,
-      style: TextStyle(color: Color(0xffb8c2ff)),
+      style: TextStyle(
+        color: Color(0xffb8c2ff),
+        fontSize: mediaQuery.width * 0.04,
+      ),
       cursorColor: Color(0xffb8c2ff),
       obscureText: obsecuretext,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: mediaQuery.width * 0.035,
+          vertical: mediaQuery.height * 0.015,
+        ),
         border: OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(6),
+          borderRadius: BorderRadius.circular(mediaQuery.width * 0.015),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(6),
+          borderRadius: BorderRadius.circular(mediaQuery.width * 0.015),
           borderSide: BorderSide(color: Color(0xff0AF9E6)),
         ),
-        labelStyle: TextStyle(color: Color(0xffb8c2ff)),
+        labelStyle: TextStyle(
+          color: Color(0xffb8c2ff),
+          fontSize: mediaQuery.width * 0.04,
+        ),
         fillColor: Color(0xff313150),
         filled: true,
         hintText: hinttext,

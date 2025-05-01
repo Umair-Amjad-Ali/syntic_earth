@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/screens/filter_screen.dart';
 import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
-// import 'package:syntic_earth/views/screens/marketplace_screen.dart';
-// import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
-// import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 
 void main() {
   runApp(const MyApp());

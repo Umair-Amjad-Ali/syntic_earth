@@ -18,39 +18,52 @@ class BottomsheetProfileScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-
           Row(
             children: [
+              // Tiles Selector
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Obx(
                     () => Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         GestureDetector(
                           onTap: dropdownController.toggleTilesContainer,
-
                           child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 12.0,
+                              horizontal: 8.0,
+                            ),
                             decoration: BoxDecoration(color: Colors.black),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.grid_view,
-                                      color: Colors.tealAccent,
-                                    ),
-                                    Text(
-                                      "20/750 Tiles Selected",
-                                      style: TextStyle(
+                                // Icon + Text (Wrapped in Flexible)
+                                Flexible(
+                                  child: Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.grid_view,
                                         color: Colors.tealAccent,
-                                        fontSize: 16,
+                                        size: 20,
                                       ),
-                                    ),
-                                  ],
+                                      const SizedBox(width: 6),
+                                      Flexible(
+                                        child: Text(
+                                          "20/750 Tiles Selected",
+                                          style: const TextStyle(
+                                            color: Colors.tealAccent,
+                                            fontSize: 14,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
+
+                                // Dropdown Icon
                                 Icon(
                                   dropdownController
                                           .isDropdownOpenedTilesSelected
@@ -69,11 +82,12 @@ class BottomsheetProfileScreen extends StatelessWidget {
                 ),
               ),
 
+              // Dropdown
               Obx(
                 () => Container(
                   width: mediaQuery.width * 0.4,
                   padding: const EdgeInsets.symmetric(horizontal: 12),
-                  decoration: BoxDecoration(color: const Color(0xff313150)),
+                  decoration: const BoxDecoration(color: Color(0xff313150)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 4,
@@ -87,12 +101,11 @@ class BottomsheetProfileScreen extends StatelessWidget {
                         },
                         dropdownStyleData: DropdownStyleData(
                           isOverButton: false,
-                          offset: Offset(0, -10),
+                          offset: const Offset(0, -10),
                           maxHeight: mediaQuery.height * 0.4,
-
                           width: mediaQuery.width * 0.4,
-                          decoration: BoxDecoration(
-                            color: const Color(0xff313150),
+                          decoration: const BoxDecoration(
+                            color: Color(0xff313150),
                           ),
                         ),
                         items:
@@ -101,18 +114,16 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                 value: item,
                                 child: Text(
                                   item,
-                                  style: TextStyle(color: Colors.white),
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               );
                             }).toList(),
-
                         value:
                             dropdownController.resourcesList.contains(
                                   dropdownController.resources.value,
                                 )
                                 ? dropdownController.resources.value
                                 : null,
-
                         onChanged: (value) {
                           if (value != null) {
                             dropdownController.resources.value = value;
@@ -122,16 +133,17 @@ class BottomsheetProfileScreen extends StatelessWidget {
                         customButton: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              dropdownController.resources.value.isEmpty
-                                  ? 'Select item'
-                                  : dropdownController.resources.value,
-                              style: const TextStyle(color: Colors.white),
+                            Flexible(
+                              child: Text(
+                                dropdownController.resources.value.isEmpty
+                                    ? 'Select item'
+                                    : dropdownController.resources.value,
+                                style: const TextStyle(color: Colors.white),
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
-                            Icon(
-                              dropdownController.isDropdownOpened.value
-                                  ? Icons.keyboard_arrow_up
-                                  : Icons.keyboard_arrow_down,
+                            const Icon(
+                              Icons.keyboard_arrow_down,
                               color: Colors.white,
                             ),
                           ],
@@ -143,6 +155,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
               ),
             ],
           ),
+
           Obx(() {
             return dropdownController.isTilesContainerVisible.value
                 ? Padding(

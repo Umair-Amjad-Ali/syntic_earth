@@ -17,7 +17,7 @@ class BottomSheetWidget extends StatelessWidget {
         children: [
           // Dash
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 12),
+            margin: const EdgeInsets.symmetric(vertical: 4),
             width: 40,
             height: 4,
             decoration: BoxDecoration(
@@ -26,6 +26,7 @@ class BottomSheetWidget extends StatelessWidget {
             ),
           ),
 
+          const SizedBox(height: 12),
           _textWithIcon(Icons.grid_view, "20 Tiles In Total"),
 
           const SizedBox(height: 12),

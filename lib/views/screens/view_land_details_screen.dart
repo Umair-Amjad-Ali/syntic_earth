@@ -11,6 +11,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
+    final isSmallScreen = mediaQuery.width < 360;
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
@@ -33,33 +34,52 @@ class ViewLandDetailsScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(
+                  mediaQuery.width * 0.04,
+                ), // responsive padding
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    // EPL Text
                     Text(
                       "EPL",
                       style: TextStyle(
-                        color: Color(0xFF28E1C7),
+                        color: const Color(0xFF28E1C7),
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: isSmallScreen ? 14 : 16,
                       ),
                     ),
-                    Container(
-                      // height: mediaQuery.height * 0.03,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Color(0xFF253049)),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(4.0),
+                    const SizedBox(width: 8),
+                    // ID with border
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          vertical: mediaQuery.width * 0.01,
+                          horizontal: mediaQuery.width * 0.02,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(color: const Color(0xFF253049)),
+                        ),
                         child: Text(
                           "ea225a29-a11d-45fb-af4f-7170dfb9fc21",
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ),
-                    Icon(Icons.copy_all_outlined, color: Color(0xFF28E1C7)),
-                    Icon(Icons.share, color: Color(0xFF28E1C7)),
+                    const SizedBox(width: 8),
+                    // Copy Icon
+                    Icon(
+                      Icons.copy_all_outlined,
+                      color: const Color(0xFF28E1C7),
+                      size: isSmallScreen ? 18 : 22,
+                    ),
+                    const SizedBox(width: 8),
+                    // Share Icon
+                    Icon(
+                      Icons.share,
+                      color: const Color(0xFF28E1C7),
+                      size: isSmallScreen ? 18 : 22,
+                    ),
                   ],
                 ),
               ),
