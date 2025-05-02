@@ -5,6 +5,7 @@ import 'package:syntic_earth/views/screens/bottomsheet_profile_screen.dart';
 import 'package:syntic_earth/views/screens/dropdown_screen.dart';
 import 'package:syntic_earth/views/screens/filtered_data_screen.dart';
 import 'package:syntic_earth/views/screens/marketplace_screen.dart';
+import 'package:syntic_earth/views/screens/profile_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_bottombar.dart';
 
@@ -18,8 +19,8 @@ class FilterScreen extends StatelessWidget {
   final List _screens = [
     FilteredDataScreen(),
     DropdownScreen(),
-    MarketplaceScreen(),
     BottomsheetProfileScreen(),
+    ProfileScreen(),
   ];
 
   @override

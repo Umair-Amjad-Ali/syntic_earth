@@ -51,11 +51,11 @@ class _TransferScreenState extends State<TransferScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // SizedBox(height: height * 0.02),
 
                     // Amount Display
                     FittedBox(
                       fit: BoxFit.scaleDown,
+                      
                       child: Text(
                         "\$${amount.isEmpty ? "0" : amount}",
                         style: TextStyle(
