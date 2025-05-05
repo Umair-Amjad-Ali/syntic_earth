@@ -13,6 +13,7 @@ class CustomFilteredDataCard extends StatelessWidget {
   final String claims;
   final bool showButtons;
   final VoidCallback ontap;
+  final VoidCallback ontapbuy;
   const CustomFilteredDataCard({
     super.key,
     required this.value,
@@ -25,7 +26,7 @@ class CustomFilteredDataCard extends StatelessWidget {
     required this.valuePercent,
     required this.claims,
     required this.ontap,
-    this.showButtons = true,
+    this.showButtons = true, required this.ontapbuy,
   });
 
   @override
@@ -97,7 +98,7 @@ class CustomFilteredDataCard extends StatelessWidget {
                     child: Buttonwidget(
                       color: Colors.cyanAccent,
                       text: "Buy",
-                      ontapped: () {},
+                      ontapped: ontapbuy,
                     ),
                   ),
                 ],

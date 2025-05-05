@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/dropdown_controller.dart';
+import 'package:syntic_earth/views/screens/filtered_data_screen.dart';
+import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
 import 'package:syntic_earth/views/widgets/custom_dropdown.dart';
 import 'package:syntic_earth/views/widgets/textfield.dart';
 
@@ -13,6 +15,14 @@ class DropdownScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: CustomFilterScreenAppbar(
+        ontap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FilteredDataScreen()),
+          );
+        },
+      ),
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(

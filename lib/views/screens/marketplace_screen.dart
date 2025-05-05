@@ -81,7 +81,6 @@ class MarketplaceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final width = size.width;
-    final height = size.height;
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
@@ -90,7 +89,6 @@ class MarketplaceScreen extends StatelessWidget {
             title: "MarketPlace",
             iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
           ),
-          SizedBox(height: height * 0.015),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: width * 0.01),

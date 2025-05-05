@@ -94,7 +94,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                 valuePercent: userData["valuePercent"],
                 claims: userData["claims"],
                 ontap: () {},
-                showButtons: false,
+                showButtons: false, ontapbuy: () {},
               ),
               Container(
                 alignment: Alignment.topLeft,

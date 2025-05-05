@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syntic_earth/views/screens/home_screen.dart';
 import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
-import 'package:syntic_earth/views/screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());

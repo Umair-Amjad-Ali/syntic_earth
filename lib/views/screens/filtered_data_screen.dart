@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/views/screens/bottomsheet_profile_screen.dart';
 import 'package:syntic_earth/views/screens/view_land_details_screen.dart';
+import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
 import 'package:syntic_earth/views/widgets/custom_filtered_data_card.dart';
 
 List<Map<String, dynamic>> demoItems = [
@@ -66,6 +68,7 @@ class FilteredDataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomFilterScreenAppbar(),
       backgroundColor: Colors.black,
       body: ListView.builder(
         itemCount: demoItems.length,
@@ -94,6 +97,14 @@ class FilteredDataScreen extends StatelessWidget {
                               ViewLandDetailsScreen(userData: demoItems[index]),
                     ),
                   ),
+              ontapbuy: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BottomsheetProfileScreen(),
+                  ),
+                );
+              },
             ),
           );
         },

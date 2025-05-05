@@ -4,7 +4,8 @@ import 'package:syntic_earth/views/widgets/textfield.dart';
 class CustomFilterScreenAppbar extends StatelessWidget
     implements PreferredSizeWidget {
   final bool showIcon;
-  const CustomFilterScreenAppbar({super.key, this.showIcon = true});
+  final VoidCallback? ontap;
+  const CustomFilterScreenAppbar({super.key, this.showIcon = true, this.ontap});
 
   @override
   Size get preferredSize => const Size.fromHeight(60);
@@ -37,7 +38,7 @@ class CustomFilterScreenAppbar extends StatelessWidget
                     color: Colors.white,
                     icon: const Icon(Icons.keyboard_arrow_up),
                     onPressed:
-                        () {}, // You can handle collapse/filter hide here
+                        ontap, // You can handle collapse/filter hide here
                   ),
                 ),
               ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 import 'package:syntic_earth/views/widgets/map_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_map_screen_appbar.dart';
 
@@ -10,7 +11,7 @@ class GoogleMapScreen extends StatelessWidget {
     Size mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
       appBar: CustomMapScreenAppbar(title: "Syntic Earth"),
-      backgroundColor: Color(0xFF151624),
+      backgroundColor: Colors.black,
 
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -34,13 +35,23 @@ class GoogleMapScreen extends StatelessWidget {
                     // Left Side: Balance Text
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           "Balance",
                           style: TextStyle(color: Colors.white60, fontSize: 14),
                         ),
                         // SizedBox(height: 4),
-                        Icon(Icons.more_horiz, color: Colors.white),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => WalletManagement(),
+                              ),
+                            );
+                          },
+                          child: Icon(Icons.more_horiz, color: Colors.white),
+                        ),
                       ],
                     ),
 
