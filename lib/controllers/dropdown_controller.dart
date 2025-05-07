@@ -2,7 +2,6 @@ import 'package:country_picker/country_picker.dart';
 import 'package:get/get.dart';
 
 class DropdownController extends GetxController {
-  // var selectedCountry = 'Armenia'.obs;
   var selectedSort = 'Tile Value Low'.obs;
   var selectedTileClass = '1'.obs;
   var selectedLandTier = 'Tier 1'.obs;
@@ -18,24 +17,35 @@ class DropdownController extends GetxController {
     isDropdownOpenedTilesSelected.value = isTilesContainerVisible.value;
   }
 
-  void pickCountry(context) {
+  final Map<String, List<String>> tierWiseCountries = {
+    'Tier 1': ['ZW', 'SK', 'RW', 'GQ', 'ZM'],
+    'Tier 2': ['AO', 'SK', 'BW', 'GA', 'LK'],
+    'Tier 3': ['IN', 'BD', 'KE', 'NG', 'PH', 'PK', 'ET', 'EG', 'VN', 'TH'],
+    'Any': [],
+  };
+
+  void pickCountry(context, String selectedTier) {
     showCountryPicker(
       context: context,
       showPhoneCode: false,
+      countryFilter:
+          selectedTier == 'Any' ? null : tierWiseCountries[selectedTier] ?? [],
       onSelect: (Country country) {
         selectedCountry.value = country;
       },
     );
   }
 
-  List<String> countries = [
-    'Armenia',
-    "Rumania",
-    "Pakistan",
-    "India",
-    "Spain",
-    "Italy",
-  ];
+  // void pickCountry(context) {
+  //   showCountryPicker(
+  //     context: context,
+  //     showPhoneCode: false,
+  //     onSelect: (Country country) {
+  //       selectedCountry.value = country;
+  //     },
+  //   );
+  // }
+
   List<String> sortOptions = [
     'Tile Value Low',
     'Highest Net Worth',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/views/screens/notification_screen.dart';
 import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 import 'package:syntic_earth/views/widgets/map_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_map_screen_appbar.dart';
@@ -10,7 +11,15 @@ class GoogleMapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: CustomMapScreenAppbar(title: "Syntic Earth"),
+      appBar: CustomMapScreenAppbar(
+        title: "Syntic Earth",
+        onNotificationTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NotificationScreen()),
+          );
+        },
+      ),
       backgroundColor: Colors.black,
 
       body: Padding(

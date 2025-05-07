@@ -1,0 +1,75 @@
+final List<Map<String, dynamic>> leaderboard = [
+  {
+    "name": "Bryan Wolf",
+    "time": 43,
+    "position": 1,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Meghan Jessica",
+    "time": 40,
+    "position": 2,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Alex Turner",
+    "time": 38,
+    "position": 3,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Marsha Fisher",
+    "time": 36,
+    "position": 4,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Juanita Cormier",
+    "time": 35,
+    "position": 5,
+    "image": "assets/images/user.jpg",
+  },
+  {"name": "You", "time": 34, "position": 6, "image": "assets/images/user.jpg"},
+  {
+    "name": "Tamara Schmidt",
+    "time": 33,
+    "position": 7,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Ricardo Veum",
+    "time": 32,
+    "position": 8,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Gary Sanford",
+    "time": 31,
+    "position": 9,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Becky Bartell",
+    "time": 30,
+    "position": 10,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Becky Bartell",
+    "time": 30,
+    "position": 10,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Becky Bartell",
+    "time": 30,
+    "position": 10,
+    "image": "assets/images/user.jpg",
+  },
+  {
+    "name": "Becky Bartell",
+    "time": 30,
+    "position": 10,
+    "image": "assets/images/user.jpg",
+  },
+];

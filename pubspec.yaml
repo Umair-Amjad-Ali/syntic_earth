@@ -68,6 +68,8 @@ flutter:
     - assets/images/logo.png
     - assets/images/google.svg
     - assets/images/apple.svg
+    - assets/images/vector.png
+    - assets/images/user.jpg
     # - images/a_dot_burr.jpeg
     # - images/a_dot_ham.jpeg
 

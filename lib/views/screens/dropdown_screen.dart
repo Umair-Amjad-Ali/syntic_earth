@@ -60,7 +60,6 @@ class DropdownScreen extends StatelessWidget {
                           child: Obx(() {
                             final country =
                                 dropdownController.selectedCountry.value;
-
                             return Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -77,6 +76,9 @@ class DropdownScreen extends StatelessWidget {
                                   onTap:
                                       () => dropdownController.pickCountry(
                                         context,
+                                        dropdownController
+                                            .selectedLandTier
+                                            .value,
                                       ),
                                   child: Container(
                                     margin: EdgeInsets.only(top: 8),
@@ -146,11 +148,11 @@ class DropdownScreen extends StatelessWidget {
                               items: dropdownController.landTiers,
                               value: dropdownController.selectedLandTier.value,
                               hint: "Filter by Land Tier",
-                              onChanged:
-                                  (val) =>
-                                      dropdownController
-                                          .selectedLandTier
-                                          .value = val!,
+                              onChanged: (val) {
+                                dropdownController.selectedLandTier.value =
+                                    val!;
+                                dropdownController.selectedCountry.value = null;
+                              },
                               labelBuilder: (item) => item,
                             ),
                           ),

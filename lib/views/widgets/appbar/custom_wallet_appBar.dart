@@ -1,7 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 
-class CustomWalletAppBar extends StatelessWidget  {
+class CustomWalletAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   const CustomWalletAppBar({
     super.key,
     required this.title,
@@ -55,4 +56,7 @@ class CustomWalletAppBar extends StatelessWidget  {
       ),
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
