@@ -68,9 +68,9 @@ class LeaderboardScreen extends StatelessWidget {
             ],
           ),
           DraggableScrollableSheet(
-            initialChildSize: 0.77,
+            initialChildSize: 0.75,
             minChildSize: 0.7,
-            maxChildSize: 0.9,
+            maxChildSize: 0.75,
             builder: (context, scrollController) {
               return Container(
                 padding: EdgeInsets.only(top: screenHeight * 0.01),

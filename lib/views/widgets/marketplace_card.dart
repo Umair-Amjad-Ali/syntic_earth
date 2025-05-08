@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/views/screens/private_chat_screen.dart';
 
 class MarketplaceCard extends StatelessWidget {
   final String location;
@@ -127,7 +128,14 @@ class MarketplaceCard extends StatelessWidget {
                         vertical: cardWidth * 0.02,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (contex) => PrivateChatScreen(),
+                        ),
+                      );
+                    },
                     child: Text(
                       "Buy Now",
                       style: TextStyle(

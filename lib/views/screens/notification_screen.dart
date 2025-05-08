@@ -323,7 +323,7 @@ class NotificationScreen extends StatelessWidget {
   }
 
   void _showMuteNotificationDialog() {
-    print("mute notificatio printed.... check it out ..");
+    // print("mute notificatio printed.... check it out ..");
     Get.dialog(
       MuteNotification(
         selectedMuteOption: selectedMuteOption,

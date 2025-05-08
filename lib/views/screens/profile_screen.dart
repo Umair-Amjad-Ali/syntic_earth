@@ -7,12 +7,11 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
-      // appBar: CustomWalletAppBar(title: title, iconData: iconData),
       body: SafeArea(
         child: SingleChildScrollView(
-          // padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
               CustomWalletAppBar(
@@ -117,22 +116,34 @@ class ProfileScreen extends StatelessWidget {
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
-                            AchievementItem(
-                              icon: Icons.rocket_launch,
-                              label: 'Early Adopter',
+                          children: [
+                            const Expanded(
+                              child: AchievementItem(
+                                icon: Icons.rocket_launch,
+                                label: 'Early Adopter',
+                              ),
                             ),
-                            AchievementItem(
-                              icon: Icons.swap_horiz,
-                              label: 'Trader',
+                            SizedBox(width: mediaQuery.width * 0.02),
+                            Expanded(
+                              child: const AchievementItem(
+                                icon: Icons.swap_horiz,
+                                label: 'Trader',
+                              ),
                             ),
-                            AchievementItem(
-                              icon: Icons.shield,
-                              label: 'Investor',
+                            SizedBox(width: mediaQuery.width * 0.02),
+                            const Expanded(
+                              child: AchievementItem(
+                                icon: Icons.shield,
+                                label: 'Investor',
+                              ),
                             ),
-                            AchievementItem(
-                              icon: Icons.shopping_cart,
-                              label: 'First Purchase',
+                            SizedBox(width: mediaQuery.width * 0.02),
+
+                            const Expanded(
+                              child: AchievementItem(
+                                icon: Icons.shopping_cart,
+                                label: 'First Purchase',
+                              ),
                             ),
                           ],
                         ),
@@ -292,6 +303,7 @@ class AchievementItem extends StatelessWidget {
               label,
               textAlign: TextAlign.center,
               style: const TextStyle(
+                overflow: TextOverflow.ellipsis,
                 fontSize: 10,
                 color: Colors.white,
                 fontFamily: 'Inter',

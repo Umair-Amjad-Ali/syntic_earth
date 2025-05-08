@@ -33,12 +33,12 @@ class NotificationController extends GetxController {
   }
 
   void acceptNotification(NotificationModel notification) {
-    print("Accepted: ${notification.title}");
+    // print("Accepted: ${notification.title}");
   }
 
   void declineNotification(NotificationModel notification) {
     notifications.remove(notification);
     notifications.refresh();
-    print("Declined: ${notification.title}");
+    // print("Declined: ${notification.title}");
   }
 }

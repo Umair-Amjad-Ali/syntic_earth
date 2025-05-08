@@ -94,7 +94,8 @@ class ViewLandDetailsScreen extends StatelessWidget {
                 valuePercent: userData["valuePercent"],
                 claims: userData["claims"],
                 ontap: () {},
-                showButtons: false, ontapbuy: () {},
+                showButtons: false,
+                ontapbuy: () {},
               ),
               Container(
                 alignment: Alignment.topLeft,
@@ -248,207 +249,222 @@ class ViewLandDetailsScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Min. Essence",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Min. Essence",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "193.2849",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Essence Transformed",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "193.2849",
+                                  style: TextStyle(color: Colors.cyanAccent),
                                 ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "127.64",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: mediaQuery.height * 0.03),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Purchased For",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "ES27.50",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "New Land Value (T1)",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "ES401.50",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: mediaQuery.height * 0.03),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "New Land Value (T1)",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "ES36.50",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "New Land Value (T1)",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: mediaQuery.height * 0.005),
-                              Text(
-                                "ES39.50",
-                                style: TextStyle(color: Colors.cyanAccent),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: mediaQuery.height * 0.03),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            // height: mediaQuery.height * 0.1,
-                            // width: mediaQuery.width * 0.1,
-                            decoration: BoxDecoration(
-                              color: Color(0xFF253049),
-                              borderRadius: BorderRadius.circular(12),
+                              ],
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(32.0),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "Buy Now For",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Essence Transformed",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  Text(
-                                    "ES0.05",
-                                    style: TextStyle(color: Colors.white70),
+                                ),
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "127.64",
+                                  style: TextStyle(color: Colors.cyanAccent),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: mediaQuery.height * 0.03),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Purchased For",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  SizedBox(height: mediaQuery.height * 0.01),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF253049),
-                                      borderRadius: BorderRadius.circular(8),
-                                      border: Border.all(color: Colors.grey),
+                                ),
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "ES27.50",
+                                  style: TextStyle(color: Colors.cyanAccent),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "New Land Value (T1)",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "ES401.50",
+                                  style: TextStyle(color: Colors.cyanAccent),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: mediaQuery.height * 0.03),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "New Land Value (T1)",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "ES36.50",
+                                  style: TextStyle(color: Colors.cyanAccent),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "New Land Value (T1)",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: mediaQuery.height * 0.005),
+                                Text(
+                                  "ES39.50",
+                                  style: TextStyle(color: Colors.cyanAccent),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: mediaQuery.height * 0.03),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Color(0xFF253049),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(32.0),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "Buy Now For",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "1360.15% \u2191",
-                                        style: TextStyle(
-                                          color: Colors.cyanAccent,
+                                    Text(
+                                      "ES0.05",
+                                      style: TextStyle(color: Colors.white70),
+                                    ),
+                                    SizedBox(height: mediaQuery.height * 0.01),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFF253049),
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(color: Colors.grey),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          "1360.15% \u2191",
+                                          style: TextStyle(
+                                            color: Colors.cyanAccent,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Color(0xFF253049),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(32.0),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "Buy Now For",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    "ES0.05",
-                                    style: TextStyle(color: Colors.white70),
-                                  ),
-                                  SizedBox(height: mediaQuery.height * 0.01),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF253049),
-                                      borderRadius: BorderRadius.circular(8),
-                                      border: Border.all(color: Colors.grey),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                        "-100.00% \u2193",
-                                        style: TextStyle(color: Colors.red),
+                          SizedBox(width: mediaQuery.width * 0.05),
+                          Expanded(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Color(0xFF253049),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(32.0),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "Buy Now For",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Text(
+                                      "ES0.05",
+                                      style: TextStyle(color: Colors.white70),
+                                    ),
+                                    SizedBox(height: mediaQuery.height * 0.01),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFF253049),
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(color: Colors.grey),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          "-100.00% \u2193",
+                                          style: TextStyle(color: Colors.red),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
