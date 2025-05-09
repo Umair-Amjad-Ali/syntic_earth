@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class CustomMapScreenAppbar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -30,7 +31,7 @@ class CustomMapScreenAppbar extends StatelessWidget
               children: [
                 // Drawer Icon
                 IconButton(
-                  icon: const Icon(Icons.menu, color: Colors.white),
+                  icon: const Icon(Icons.menu, color: AppColors.white),
                   onPressed: onDrawerTap ?? () {},
                 ),
 
@@ -38,7 +39,7 @@ class CustomMapScreenAppbar extends StatelessWidget
                 Text(
                   title,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: AppColors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -48,7 +49,7 @@ class CustomMapScreenAppbar extends StatelessWidget
                 IconButton(
                   icon: const Icon(
                     Icons.notifications_none,
-                    color: Colors.white,
+                    color: AppColors.white,
                   ),
                   onPressed: onNotificationTap ?? () {},
                 ),

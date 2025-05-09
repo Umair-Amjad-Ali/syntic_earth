@@ -20,7 +20,7 @@ class NotificationScreen extends StatelessWidget {
     final double fontSize = screenWidth * 0.04;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       appBar: _buildAppBar(screenWidth, screenHeight, fontSize),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.05),
@@ -69,7 +69,7 @@ class NotificationScreen extends StatelessWidget {
     double fontSize,
   ) {
     return AppBar(
-      backgroundColor: AppColors.black,
+      backgroundColor: AppColors.bgColor,
       leading: IconButton(
         onPressed: () => Get.back(),
         icon: const Icon(
@@ -88,7 +88,7 @@ class NotificationScreen extends StatelessWidget {
       centerTitle: true,
       actions: [
         PopupMenuButton<String>(
-          color: Colors.grey[900],
+          color: AppColors.secondaryColor,
           icon: const Icon(Icons.settings, color: AppColors.white),
           offset: Offset(0, screenHeight * 0.06),
           onSelected: (value) {
@@ -129,7 +129,7 @@ class NotificationScreen extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.black,
+        color: AppColors.bgColor,
         borderRadius: BorderRadius.circular(screenWidth * 0.04),
       ),
       padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.04),
@@ -140,14 +140,14 @@ class NotificationScreen extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             leading: CircleAvatar(
               radius: screenWidth * 0.06,
-              backgroundColor: Colors.grey[600],
+              backgroundColor: AppColors.grey,
               backgroundImage:
                   (notification.avatar.isNotEmpty)
                       ? AssetImage(notification.avatar)
                       : null,
               child:
                   (notification.avatar.isEmpty)
-                      ? const Icon(Icons.notifications, color: Colors.white)
+                      ? const Icon(Icons.notifications, color: AppColors.white)
                       : null,
             ),
             title: Row(
@@ -197,7 +197,7 @@ class NotificationScreen extends StatelessWidget {
                           width: screenWidth * 0.018,
                           height: screenWidth * 0.018,
                           decoration: BoxDecoration(
-                            color: AppColors.typingColor,
+                            color: AppColors.textFieldColor,
                             shape: BoxShape.circle,
                           ),
                         ),
@@ -215,7 +215,7 @@ class NotificationScreen extends StatelessWidget {
                   child: SizedBox(
                     height: screenHeight * 0.06,
                     child: Buttonwidget(
-                      borderColor: Colors.cyanAccent,
+                      borderColor: AppColors.primaryColor,
                       text: "Decline",
                       ontapped:
                           () => controller.declineNotification(notification),
@@ -224,7 +224,7 @@ class NotificationScreen extends StatelessWidget {
                     //   onPressed:
                     //       () => controller.declineNotification(notification),
                     //   style: OutlinedButton.styleFrom(
-                    //     side: BorderSide(color: AppColors.typingColor),
+                    //     side: BorderSide(color: AppColors.textFieldColor),
                     //     shape: RoundedRectangleBorder(
                     //       borderRadius: BorderRadius.circular(
                     //         screenWidth * 0.03,
@@ -234,7 +234,7 @@ class NotificationScreen extends StatelessWidget {
                     //   child: Text(
                     //     "Decline",
                     //     style: TextStyle(
-                    //       color: AppColors.typingColor,
+                    //       color: AppColors.textFieldColor,
                     //       fontSize: fontSize * 0.9,
                     //     ),
                     //   ),
@@ -246,7 +246,7 @@ class NotificationScreen extends StatelessWidget {
                   child: SizedBox(
                     height: screenHeight * 0.06,
                     child: Buttonwidget(
-                      color: Colors.cyanAccent,
+                      color: AppColors.primaryColor,
                       text: "Accept",
                       ontapped:
                           () => controller.acceptNotification(notification),
@@ -255,7 +255,7 @@ class NotificationScreen extends StatelessWidget {
                     //   onPressed:
                     //       () => controller.acceptNotification(notification),
                     //   style: ElevatedButton.styleFrom(
-                    //     backgroundColor: AppColors.typingColor,
+                    //     backgroundColor: AppColors.textFieldColor,
                     //     shape: RoundedRectangleBorder(
                     //       borderRadius: BorderRadius.circular(
                     //         screenWidth * 0.03,
@@ -292,7 +292,7 @@ class NotificationScreen extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          color: Colors.white,
+          color: AppColors.white,
           fontSize: fontSize * 1.1,
           fontWeight: FontWeight.bold,
         ),
@@ -310,9 +310,12 @@ class NotificationScreen extends StatelessWidget {
       value: value,
       child: Row(
         children: [
-          Icon(icon, color: Colors.white, size: fontSize * 1.1),
+          Icon(icon, color: AppColors.white, size: fontSize * 1.1),
           const SizedBox(width: 10),
-          Text(text, style: TextStyle(color: Colors.white, fontSize: fontSize)),
+          Text(
+            text,
+            style: TextStyle(color: AppColors.white, fontSize: fontSize),
+          ),
         ],
       ),
     );

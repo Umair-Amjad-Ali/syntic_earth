@@ -2,6 +2,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/dropdown_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
 import 'package:syntic_earth/views/widgets/bottom_sheet.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
@@ -18,7 +19,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: CustomFilterScreenAppbar(showIcon: false),
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.bgColor,
         body: Column(
           children: [
             Row(
@@ -38,7 +39,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                 vertical: 12.0,
                                 horizontal: 8.0,
                               ),
-                              decoration: BoxDecoration(color: Colors.black),
+                              decoration: BoxDecoration(color: AppColors.black),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -49,7 +50,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.grid_view,
-                                          color: Colors.tealAccent,
+                                          color: AppColors.primaryColor,
                                           size: 20,
                                         ),
                                         const SizedBox(width: 6),
@@ -57,7 +58,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                           child: Text(
                                             "20/750 Tiles Selected",
                                             style: const TextStyle(
-                                              color: Colors.tealAccent,
+                                              color: AppColors.primaryColor,
                                               fontSize: 14,
                                             ),
                                             overflow: TextOverflow.ellipsis,
@@ -74,7 +75,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                             .value
                                         ? Icons.keyboard_arrow_up
                                         : Icons.keyboard_arrow_down,
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                   ),
                                 ],
                               ),
@@ -91,7 +92,9 @@ class BottomsheetProfileScreen extends StatelessWidget {
                   () => Container(
                     width: mediaQuery.width * 0.4,
                     padding: const EdgeInsets.symmetric(horizontal: 12),
-                    decoration: const BoxDecoration(color: Color(0xff313150)),
+                    decoration: const BoxDecoration(
+                      color: AppColors.secondaryColor,
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 4,
@@ -109,7 +112,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                             maxHeight: mediaQuery.height * 0.4,
                             width: mediaQuery.width * 0.4,
                             decoration: const BoxDecoration(
-                              color: Color(0xff313150),
+                              color: AppColors.secondaryColor,
                             ),
                           ),
                           items:
@@ -118,7 +121,9 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                   value: item,
                                   child: Text(
                                     item,
-                                    style: const TextStyle(color: Colors.white),
+                                    style: const TextStyle(
+                                      color: AppColors.white,
+                                    ),
                                   ),
                                 );
                               }).toList(),
@@ -143,13 +148,15 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                   dropdownController.resources.value.isEmpty
                                       ? 'Select item'
                                       : dropdownController.resources.value,
-                                  style: const TextStyle(color: Colors.white),
+                                  style: const TextStyle(
+                                    color: AppColors.white,
+                                  ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                               const Icon(
                                 Icons.keyboard_arrow_down,
-                                color: Colors.white,
+                                color: AppColors.white,
                               ),
                             ],
                           ),
@@ -172,23 +179,23 @@ class BottomsheetProfileScreen extends StatelessWidget {
                           Row(
                             children: [
                               Buttonwidget(
-                                borderColor: Colors.cyanAccent,
+                                borderColor: AppColors.primaryColor,
                                 text: "Details",
                                 btnwidth: mediaQuery.width * 0.25,
                               ),
                               SizedBox(width: 8),
                               Expanded(
                                 child: Buttonwidget(
-                                  borderColor: Colors.pinkAccent,
+                                  borderColor: AppColors.alert,
                                   text: "Clear Selection",
                                 ),
                               ),
                               const SizedBox(width: 8),
                               CircleAvatar(
-                                backgroundColor: Colors.white,
+                                backgroundColor: AppColors.white,
                                 child: const Text(
                                   "T1",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: AppColors.black),
                                 ),
                               ),
                               const SizedBox(width: 8),
@@ -196,7 +203,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                                 backgroundColor: Colors.cyanAccent,
                                 child: const Icon(
                                   Icons.flight_takeoff,
-                                  color: Colors.black,
+                                  color: AppColors.black,
                                 ),
                               ),
                             ],
@@ -204,21 +211,24 @@ class BottomsheetProfileScreen extends StatelessWidget {
                           const SizedBox(height: 16),
                           const Text(
                             "Min. Essence",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            style: TextStyle(
+                              color: AppColors.white,
+                              fontSize: 16,
+                            ),
                           ),
                           const SizedBox(height: 8),
                           Row(
                             children: [
                               const Icon(
                                 Icons.diamond,
-                                color: Colors.cyanAccent,
+                                color: AppColors.primaryColor,
                                 size: 20,
                               ),
                               const SizedBox(width: 4),
                               Text(
                                 "193.2849",
                                 style: const TextStyle(
-                                  color: Colors.cyanAccent,
+                                  color: AppColors.primaryColor,
                                   fontSize: 18,
                                 ),
                               ),
@@ -244,7 +254,7 @@ class BottomsheetProfileScreen extends StatelessWidget {
                       return Container(
                         padding: const EdgeInsets.symmetric(vertical: 14),
                         decoration: const BoxDecoration(
-                          color: Color(0xff1c1c2d),
+                          color: AppColors.bgColor,
                           borderRadius: BorderRadius.vertical(
                             top: Radius.circular(24),
                           ),

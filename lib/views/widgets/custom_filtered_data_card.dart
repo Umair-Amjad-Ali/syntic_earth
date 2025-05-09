@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 
 class CustomFilteredDataCard extends StatelessWidget {
@@ -26,13 +27,14 @@ class CustomFilteredDataCard extends StatelessWidget {
     required this.valuePercent,
     required this.claims,
     required this.ontap,
-    this.showButtons = true, required this.ontapbuy,
+    this.showButtons = true,
+    required this.ontapbuy,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xFF1B1C2B),
+      color: AppColors.textFieldColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
       margin: const EdgeInsets.only(top: 12),
       child: Padding(

@@ -56,24 +56,33 @@ class ChatWidget extends StatelessWidget {
               style: TextStyle(color: AppColors.white),
               decoration: InputDecoration(
                 filled: true,
-                fillColor: AppColors.messageColor,
+                fillColor: AppColors.textFieldColor,
                 hintText: "Type a message",
                 hintStyle: TextStyle(color: AppColors.grey),
                 prefixIcon: Padding(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.03),
-                  child: Icon(Icons.emoji_emotions_outlined,
-                      color: Colors.grey, size: screenWidth * 0.07),
+                  child: Icon(
+                    Icons.emoji_emotions_outlined,
+                    color: AppColors.grey,
+                    size: screenWidth * 0.07,
+                  ),
                 ),
                 suffixIcon: Padding(
                   padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.01),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(Icons.camera_alt,
-                          color: Colors.grey, size: screenWidth * 0.07),
+                      Icon(
+                        Icons.camera_alt,
+                        color: AppColors.grey,
+                        size: screenWidth * 0.07,
+                      ),
                       SizedBox(width: screenWidth * 0.03),
-                      Icon(Icons.mic,
-                          color: Colors.grey, size: screenWidth * 0.07),
+                      Icon(
+                        Icons.mic,
+                        color: AppColors.grey,
+                        size: screenWidth * 0.07,
+                      ),
                       SizedBox(width: screenWidth * 0.03),
                     ],
                   ),
@@ -90,13 +99,15 @@ class ChatWidget extends StatelessWidget {
             onTap: () {
               if (controller.messageController.text.trim().isNotEmpty) {
                 controller.sendMessage(
-                    controller.messageController.text, "user");
+                  controller.messageController.text,
+                  "user",
+                );
                 controller.messageController.clear();
               }
             },
             child: CircleAvatar(
               radius: screenWidth * 0.06,
-              backgroundColor: AppColors.primaryBlue,
+              backgroundColor: AppColors.primaryColor,
               child: Icon(
                 Icons.send,
                 color: AppColors.white,

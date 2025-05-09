@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 
 class TransferScreen extends StatefulWidget {
@@ -34,13 +35,13 @@ class _TransferScreenState extends State<TransferScreen> {
     final height = size.height;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: SafeArea(
         child: Column(
           children: [
             const CustomWalletAppBar(
               title: "Transfer",
-              iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+              iconData: Icon(Icons.arrow_back_ios_new, color: AppColors.white),
             ),
             Expanded(
               child: Padding(
@@ -51,15 +52,14 @@ class _TransferScreenState extends State<TransferScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-
                     // Amount Display
                     FittedBox(
                       fit: BoxFit.scaleDown,
-                      
+
                       child: Text(
                         "\$${amount.isEmpty ? "0" : amount}",
                         style: TextStyle(
-                          color: Colors.cyanAccent,
+                          color: AppColors.primaryColor,
                           fontSize: width * 0.1,
                           fontWeight: FontWeight.bold,
                         ),
@@ -70,7 +70,7 @@ class _TransferScreenState extends State<TransferScreen> {
                     Text(
                       "Current Balance : \$20,000",
                       style: TextStyle(
-                        color: Colors.white70,
+                        color: AppColors.textColor,
                         fontSize: width * 0.035,
                       ),
                     ),
@@ -112,8 +112,8 @@ class _TransferScreenState extends State<TransferScreen> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.cyanAccent,
-                          foregroundColor: Colors.black,
+                          backgroundColor: AppColors.primaryColor,
+                          foregroundColor: AppColors.black,
                           padding: EdgeInsets.symmetric(
                             vertical: height * 0.02,
                           ),
@@ -147,19 +147,19 @@ class _TransferScreenState extends State<TransferScreen> {
         width: width * 0.18,
         height: width * 0.18,
         decoration: BoxDecoration(
-          color: const Color(0xFF1E1E1E),
+          color: AppColors.textFieldColor,
           shape: BoxShape.circle,
         ),
         child: Center(
           child:
               icon != null
-                  ? Icon(icon, color: Colors.white, size: width * 0.06)
+                  ? Icon(icon, color: AppColors.white, size: width * 0.06)
                   : value == "."
                   ? Container(
                     width: width * 0.02,
                     height: width * 0.02,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColors.white,
                       shape: BoxShape.circle,
                     ),
                   )
@@ -167,7 +167,7 @@ class _TransferScreenState extends State<TransferScreen> {
                     value,
                     style: TextStyle(
                       fontSize: width * 0.06,
-                      color: Colors.white,
+                      color: AppColors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

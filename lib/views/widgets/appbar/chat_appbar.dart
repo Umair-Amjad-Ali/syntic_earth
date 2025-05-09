@@ -15,7 +15,7 @@ class ChatAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.bgColor,
       elevation: 0,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white),
+        icon: Icon(Icons.arrow_back_ios_new_outlined, color: AppColors.white),
         onPressed: () => Navigator.of(context).pop(),
       ),
       title: Row(
@@ -31,18 +31,21 @@ class ChatAppbar extends StatelessWidget implements PreferredSizeWidget {
               Text(
                 "Mentisa",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Row(
                 children: [
-                  Icon(Icons.circle, color: Colors.green, size: 10),
+                  Icon(Icons.circle, color: AppColors.primaryColor, size: 10),
                   SizedBox(width: 4),
                   Text(
                     "Online",
-                    style: TextStyle(color: Colors.green, fontSize: 14),
+                    style: TextStyle(
+                      color: AppColors.primaryColor,
+                      fontSize: 14,
+                    ),
                   ),
                 ],
               ),

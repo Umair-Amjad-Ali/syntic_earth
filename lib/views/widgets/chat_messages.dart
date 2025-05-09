@@ -42,7 +42,7 @@ class ChatMessage extends StatelessWidget {
                     vertical: screenWidth * 0.025),
                 decoration: BoxDecoration(
                   color:
-                      isUser ? AppColors.primaryBlue : AppColors.messageColor,
+                      isUser ? AppColors.primaryColor : AppColors.messageColor,
                   borderRadius: BorderRadius.circular(screenWidth * 0.04),
                 ),
                 constraints: BoxConstraints(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/private_chat_screen.dart';
 
 class MarketplaceCard extends StatelessWidget {
@@ -26,8 +27,8 @@ class MarketplaceCard extends StatelessWidget {
         double cardWidth = constraints.maxWidth;
         return Card(
           elevation: 6,
-          shadowColor: Colors.white.withAlpha(153),
-          color: const Color(0xFF1B1C2B),
+          shadowColor: AppColors.white.withAlpha(153),
+          color: AppColors.textFieldColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
           ),
@@ -44,12 +45,12 @@ class MarketplaceCard extends StatelessWidget {
                       height: cardWidth * 0.12,
                       width: cardWidth * 0.12,
                       decoration: BoxDecoration(
-                        color: Colors.white10,
+                        color: AppColors.white,
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Icon(
                         icon,
-                        color: Colors.white,
+                        color: AppColors.primaryColor,
                         size: cardWidth * 0.06,
                       ),
                     ),
@@ -63,7 +64,7 @@ class MarketplaceCard extends StatelessWidget {
                           Text(
                             location,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: AppColors.white,
                               fontSize: cardWidth * 0.04,
                               fontWeight: FontWeight.bold,
                             ),
@@ -72,7 +73,7 @@ class MarketplaceCard extends StatelessWidget {
                           Text(
                             tiles,
                             style: TextStyle(
-                              color: Colors.white70,
+                              color: AppColors.textColor,
                               fontSize: cardWidth * 0.035,
                             ),
                           ),
@@ -80,7 +81,7 @@ class MarketplaceCard extends StatelessWidget {
                           Text(
                             listedBy,
                             style: TextStyle(
-                              color: Colors.white70,
+                              color: AppColors.textColor,
                               fontSize: cardWidth * 0.03,
                             ),
                           ),
@@ -104,7 +105,7 @@ class MarketplaceCard extends StatelessWidget {
                         Text(
                           price,
                           style: TextStyle(
-                            color: Color(0xFF28E1C7),
+                            color: AppColors.primaryColor,
                             fontSize: cardWidth * 0.04,
                             fontWeight: FontWeight.bold,
                           ),
@@ -119,7 +120,7 @@ class MarketplaceCard extends StatelessWidget {
                   alignment: Alignment.bottomRight,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF28E1C7),
+                      backgroundColor: AppColors.primaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -139,7 +140,7 @@ class MarketplaceCard extends StatelessWidget {
                     child: Text(
                       "Buy Now",
                       style: TextStyle(
-                        color: Colors.black,
+                        color: AppColors.black,
                         fontSize: cardWidth * 0.035,
                       ),
                     ),
@@ -162,14 +163,14 @@ class MarketplaceCard extends StatelessWidget {
           vertical: width * 0.01,
         ),
         decoration: BoxDecoration(
-          color: const Color(0xFF253049),
+          color: AppColors.secondaryColor,
           borderRadius: BorderRadius.circular(5),
         ),
         child: Text(
           label,
           style: TextStyle(
             fontSize: width * 0.025,
-            color: Color(0xFF28E1C7),
+            color: AppColors.primaryColor,
             fontWeight: FontWeight.w600,
           ),
         ),

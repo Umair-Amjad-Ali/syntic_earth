@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/authentication/login_screen.dart';
 import 'package:syntic_earth/views/screens/authentication/signup_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
@@ -31,19 +32,19 @@ class WelcomeScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: mediaQuery.height * 0.03,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: AppColors.white,
                 ),
               ),
               SizedBox(height: mediaQuery.height * 0.02),
               Text(
                 "We're building a 1:1 scale playable digital Earth and thank you for being a part of this journey",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Color(0xffb8c2ff)),
+                style: TextStyle(color: AppColors.textColor),
               ),
               SizedBox(height: mediaQuery.height * 0.02),
               Buttonwidget(
                 text: "Get Started",
-                color: Color(0xff0AF9E6),
+                color: AppColors.primaryColor,
                 ontapped: () {
                   Navigator.push(
                     context,
@@ -55,11 +56,11 @@ class WelcomeScreen extends StatelessWidget {
               Text.rich(
                 TextSpan(
                   text: "Haven't registered yet? ",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: AppColors.textColor),
                   children: [
                     TextSpan(
                       text: "Register",
-                      style: TextStyle(color: Color(0xff0AF9E6)),
+                      style: TextStyle(color: AppColors.primaryColor),
                       recognizer:
                           TapGestureRecognizer()
                             ..onTap = () {

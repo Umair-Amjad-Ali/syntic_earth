@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/otp_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/authentication/password_screen.dart';
 import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
@@ -16,7 +17,7 @@ class Otpscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xff1A1A2E),
+      backgroundColor: AppColors.bgColor,
 
       body: SafeArea(
         child: SizedBox(
@@ -32,7 +33,7 @@ class Otpscreen extends StatelessWidget {
                   child: Text(
                     "Check your inbox",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.white,
                       fontSize: mediaQuery.height * 0.04,
                       fontWeight: FontWeight.bold,
                     ),
@@ -43,7 +44,7 @@ class Otpscreen extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: Text(
                     "To continue enter the code we sent to your gmail",
-                    style: TextStyle(color: Color(0xffb8c2ff)),
+                    style: TextStyle(color: AppColors.textColor),
                   ),
                 ),
 
@@ -55,16 +56,16 @@ class Otpscreen extends StatelessWidget {
                       child: OtpTextField(
                         numberOfFields: 4,
 
-                        focusedBorderColor: const Color(0xff0AF9E6),
+                        focusedBorderColor: AppColors.primaryColor,
                         borderColor:
                             otpController.isError.value
-                                ? Colors.red
-                                : const Color(0xff0AF9E6),
+                                ? AppColors.alert
+                                : AppColors.primaryColor,
                         fieldWidth: 50,
                         showFieldAsBox: true,
                         borderRadius: BorderRadius.circular(15),
-                        textStyle: const TextStyle(color: Color(0xffb8c2ff)),
-                        cursorColor: const Color(0xffb8c2ff),
+                        textStyle: const TextStyle(color: AppColors.textColor),
+                        cursorColor: AppColors.textColor,
                         onCodeChanged: (String code) {
                           otpController.updateOtp(code);
                         },
@@ -80,7 +81,7 @@ class Otpscreen extends StatelessWidget {
 
                 Buttonwidget(
                   text: "Continue",
-                  color: const Color(0xff0AF9E6),
+                  color: AppColors.primaryColor,
                   ontapped: () {
                     if (otpController.validateOtp()) {
                       Navigator.push(
@@ -93,7 +94,7 @@ class Otpscreen extends StatelessWidget {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text("All fields are required"),
-                          backgroundColor: Color(0xff0AF9E6),
+                          backgroundColor: AppColors.primaryColor,
                         ),
                       );
                     }
@@ -104,11 +105,11 @@ class Otpscreen extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: "Didn't received a code? ",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: AppColors.white),
                     children: [
                       TextSpan(
                         text: "Resend",
-                        style: TextStyle(color: Color(0xff0AF9E6)),
+                        style: TextStyle(color: AppColors.primaryColor),
                         recognizer:
                             TapGestureRecognizer()
                               ..onTap = () {

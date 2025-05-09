@@ -17,7 +17,7 @@ class DeleteNotification extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height * 0.2;
 
     return Dialog(
-      backgroundColor: AppColors.messageColor,
+      backgroundColor: AppColors.textFieldColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: SizedBox(
         width: width,
@@ -43,7 +43,7 @@ class DeleteNotification extends StatelessWidget {
                   Buttonwidget(
                     btnwidth: mediaQuery.width * 0.3,
                     text: "No",
-                    borderColor: Colors.cyanAccent,
+                    borderColor: AppColors.primaryColor,
                     ontapped: () => Get.back(),
                   ),
                   // BuildButton(
@@ -55,7 +55,7 @@ class DeleteNotification extends StatelessWidget {
                   Buttonwidget(
                     btnwidth: mediaQuery.width * 0.3,
                     text: "Yes",
-                    color: Colors.cyanAccent,
+                    color: AppColors.primaryColor,
                     ontapped: () {
                       controller.notifications.clear();
                       Get.back();

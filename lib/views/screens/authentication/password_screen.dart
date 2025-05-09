@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/onboarding/welcome_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 import 'package:syntic_earth/views/widgets/textfield.dart';
@@ -24,7 +25,7 @@ class PasswordScreen extends StatelessWidget {
     //     TextEditingController();
 
     return Scaffold(
-      backgroundColor: Color(0xff1A1A2E),
+      backgroundColor: AppColors.bgColor,
       body: SizedBox(
         height: mediaQuery.height,
         width: mediaQuery.width,
@@ -41,7 +42,7 @@ class PasswordScreen extends StatelessWidget {
                     child: Text(
                       "Password Setup",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: AppColors.white,
                         fontSize: mediaQuery.height * 0.04,
                         fontWeight: FontWeight.bold,
                       ),
@@ -53,7 +54,7 @@ class PasswordScreen extends StatelessWidget {
                     child: Text(
                       "Please set your password",
 
-                      style: TextStyle(color: Color(0xffb8c2ff)),
+                      style: TextStyle(color: AppColors.textColor),
                     ),
                   ),
                   SizedBox(height: mediaQuery.height * 0.02),
@@ -67,7 +68,7 @@ class PasswordScreen extends StatelessWidget {
                           !textfieldController.isPasswordVisible.value,
                       toggleVisibility:
                           textfieldController.togglePasswordVisibility,
-                      sufficoncolor: Color(0xffb8c2ff),
+                      sufficoncolor: AppColors.textColor,
                       // onChanged: (val) {
                       //   textfieldController.checkPasswordsMatch(
                       //     val,
@@ -88,7 +89,7 @@ class PasswordScreen extends StatelessWidget {
                               .value,
                       toggleVisibility:
                           textfieldController.toggleConfirmPasswordVisibility,
-                      sufficoncolor: Color(0xffb8c2ff),
+                      sufficoncolor: AppColors.textColor,
                       // onChanged: (val) {
                       //   textfieldController.checkPasswordsMatch(
                       //     confirmPasswordController.text,
@@ -103,7 +104,7 @@ class PasswordScreen extends StatelessWidget {
 
                   Buttonwidget(
                     text: "Continue",
-                    color: Color(0xff0AF9E6),
+                    color: AppColors.primaryColor,
                     // enabled: textfieldController.doPasswordsMatch.value,
                     ontapped: () {
                       if (_formKey.currentState!.validate()) {

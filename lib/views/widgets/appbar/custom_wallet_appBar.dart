@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class CustomWalletAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -24,7 +25,7 @@ class CustomWalletAppBar extends StatelessWidget
         right: width * 0.04,
         bottom: 12,
       ),
-      color: Colors.black,
+      color: AppColors.bgColor,
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -35,7 +36,7 @@ class CustomWalletAppBar extends StatelessWidget
               child: Container(
                 padding: EdgeInsets.all(width * 0.02),
                 decoration: BoxDecoration(
-                  color: Color(0xFF1D1D1D),
+                  color: AppColors.secondaryColor,
                   shape: BoxShape.circle,
                 ),
                 child: iconData,
@@ -48,7 +49,7 @@ class CustomWalletAppBar extends StatelessWidget
               style: TextStyle(
                 fontSize: width * 0.05,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: AppColors.white,
               ),
             ),
           ),

@@ -32,7 +32,7 @@ class PrivateChatScreen extends StatelessWidget {
                 ),
                 padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.02),
                 child: TextField(
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  style: TextStyle(color: AppColors.white, fontSize: 14),
                   decoration: InputDecoration(
                     prefixIcon: Padding(
                       padding: EdgeInsets.only(left: screenWidth * 0.02),
@@ -43,9 +43,12 @@ class PrivateChatScreen extends StatelessWidget {
                       ),
                     ),
                     hintText: "Search",
-                    hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
+                    hintStyle: TextStyle(
+                      color: AppColors.textColor,
+                      fontSize: 14,
+                    ),
                     filled: true,
-                    fillColor: Colors.grey[900],
+                    fillColor: AppColors.textFieldColor,
                     isDense: true,
                     contentPadding: EdgeInsets.symmetric(
                       vertical: screenHeight * 0.01,

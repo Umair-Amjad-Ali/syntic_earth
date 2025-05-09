@@ -31,7 +31,7 @@ class LeaderboardScreen extends StatelessWidget {
                   Expanded(
                     child: buildTopUser(
                       leaderboard[1],
-                      AppColors.typingColor,
+                      AppColors.primaryColor,
                       avatarSize,
                       10,
                       2,
@@ -43,7 +43,7 @@ class LeaderboardScreen extends StatelessWidget {
                   Expanded(
                     child: buildTopUser(
                       leaderboard[0],
-                      AppColors.typingColor,
+                      AppColors.primaryColor,
                       firstPlaceSize,
                       20,
                       1,
@@ -55,7 +55,7 @@ class LeaderboardScreen extends StatelessWidget {
                   Expanded(
                     child: buildTopUser(
                       leaderboard[2],
-                      AppColors.typingColor,
+                      AppColors.primaryColor,
                       avatarSize,
                       10,
                       3,
@@ -99,7 +99,7 @@ class LeaderboardScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         color:
                             isYou
-                                ? AppColors.typingColor
+                                ? AppColors.primaryColor
                                 : AppColors.secondaryColor,
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -183,7 +183,7 @@ class LeaderboardScreen extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(size * 0.1),
                 decoration: BoxDecoration(
-                  color: AppColors.typingColor,
+                  color: AppColors.primaryColor,
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 2),
                 ),

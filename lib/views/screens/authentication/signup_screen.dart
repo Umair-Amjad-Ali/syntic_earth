@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/checkbox_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/authentication/login_screen.dart';
 import 'package:syntic_earth/views/screens/authentication/otp_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
@@ -18,7 +19,7 @@ class SignupScreen extends StatelessWidget {
     Size mediaQuery = MediaQuery.of(context).size;
     final CheckboxController checkboxController = Get.put(CheckboxController());
     return Scaffold(
-      backgroundColor: Color(0xff1A1A2E),
+      backgroundColor: AppColors.bgColor,
       body: SizedBox(
         height: mediaQuery.height,
         width: mediaQuery.width,
@@ -34,7 +35,7 @@ class SignupScreen extends StatelessWidget {
                   child: Text(
                     "Sign up",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.white,
                       fontSize: mediaQuery.height * 0.04,
                       fontWeight: FontWeight.bold,
                     ),
@@ -45,7 +46,7 @@ class SignupScreen extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: Text(
                     "Enter your email below to continue",
-                    style: TextStyle(color: Color(0xffb8c2ff)),
+                    style: TextStyle(color: AppColors.textColor),
                   ),
                 ),
 
@@ -62,8 +63,8 @@ class SignupScreen extends StatelessWidget {
                       () => Checkbox(
                         value: checkboxController.isChecked.value,
                         onChanged: checkboxController.toggleCheckBox,
-                        activeColor: Color(0xff0AF9E6),
-
+                        side: BorderSide(color: AppColors.primaryColor),
+                        activeColor: AppColors.primaryColor,
                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         visualDensity: VisualDensity(
                           horizontal: -4,
@@ -80,15 +81,15 @@ class SignupScreen extends StatelessWidget {
                           text: "By checking you aggree to ",
                           style: TextStyle(
                             fontSize: mediaQuery.width * 0.038,
-                            color: Colors.white,
+                            color: AppColors.white,
                           ),
                           children: [
                             TextSpan(
                               text: "Terms and Conditions",
                               style: TextStyle(
                                 decoration: TextDecoration.underline,
-                                color: Color(0xff0AF9E6),
-                                decorationColor: Color(0xff0AF9E6),
+                                color: AppColors.primaryColor,
+                                decorationColor: AppColors.primaryColor,
                                 decorationThickness: 1,
                                 fontSize: mediaQuery.width * 0.04,
                               ),
@@ -109,7 +110,7 @@ class SignupScreen extends StatelessWidget {
                 Obx(
                   () => Buttonwidget(
                     text: "Continue",
-                    color: Color(0xff0AF9E6),
+                    color: AppColors.primaryColor,
                     enabled: checkboxController.isChecked.value,
                     ontapped: () {
                       if (_formKey.currentState!.validate()) {
@@ -125,7 +126,7 @@ class SignupScreen extends StatelessWidget {
                 Text(
                   "Or",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppColors.white,
                     fontSize: mediaQuery.height * 0.025,
                   ),
                 ),
@@ -133,11 +134,11 @@ class SignupScreen extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: "Already have an account? ",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: AppColors.white),
                     children: [
                       TextSpan(
                         text: "Login",
-                        style: TextStyle(color: Color(0xff0AF9E6)),
+                        style: TextStyle(color: AppColors.primaryColor),
                         recognizer:
                             TapGestureRecognizer()
                               ..onTap = () {

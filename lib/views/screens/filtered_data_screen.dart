@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/bottomsheet_profile_screen.dart';
 import 'package:syntic_earth/views/screens/view_land_details_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
@@ -69,7 +70,7 @@ class FilteredDataScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomFilterScreenAppbar(),
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: ListView.builder(
         itemCount: demoItems.length,
         itemBuilder: (context, index) {

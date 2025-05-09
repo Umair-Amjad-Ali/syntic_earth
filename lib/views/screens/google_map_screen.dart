@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/notification_screen.dart';
 import 'package:syntic_earth/views/screens/wallet/wallet_management.dart';
 import 'package:syntic_earth/views/widgets/map_screen.dart';
@@ -20,14 +21,14 @@ class GoogleMapScreen extends StatelessWidget {
           );
         },
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
 
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
             Card(
-              color: Color(0xFF1B1C2B),
+              color: AppColors.textFieldColor,
               // margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               elevation: 0,
               shape: RoundedRectangleBorder(
@@ -47,7 +48,10 @@ class GoogleMapScreen extends StatelessWidget {
                       children: [
                         const Text(
                           "Balance",
-                          style: TextStyle(color: Colors.white60, fontSize: 14),
+                          style: TextStyle(
+                            color: AppColors.textColor,
+                            fontSize: 14,
+                          ),
                         ),
                         // SizedBox(height: 4),
                         GestureDetector(
@@ -59,7 +63,7 @@ class GoogleMapScreen extends StatelessWidget {
                               ),
                             );
                           },
-                          child: Icon(Icons.more_horiz, color: Colors.white),
+                          child: Icon(Icons.more_horiz, color: AppColors.white),
                         ),
                       ],
                     ),
@@ -71,7 +75,7 @@ class GoogleMapScreen extends StatelessWidget {
                         Text(
                           "\$20,000",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.white,
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -82,13 +86,13 @@ class GoogleMapScreen extends StatelessWidget {
                             vertical: 6,
                           ),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF253049),
+                            color: AppColors.primaryColor.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Text(
                             "+12% Today",
                             style: TextStyle(
-                              color: Color(0xFF28E1C7),
+                              color: AppColors.primaryColor,
                               fontSize: 12,
                             ),
                           ),
@@ -108,7 +112,7 @@ class GoogleMapScreen extends StatelessWidget {
                     height: mediaQuery.height * 0.5,
                     // width: 100,
                     decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: AppColors.grey,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     clipBehavior: Clip.antiAlias,
@@ -118,7 +122,7 @@ class GoogleMapScreen extends StatelessWidget {
                     bottom: 16,
                     right: 16,
                     child: FloatingActionButton(
-                      backgroundColor: Color(0xFF28E1C7),
+                      backgroundColor: AppColors.primaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           30,

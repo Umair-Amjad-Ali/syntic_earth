@@ -20,7 +20,7 @@ class MuteNotification extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height * 0.4;
 
     return Dialog(
-      backgroundColor: AppColors.messageColor,
+      backgroundColor: AppColors.textFieldColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: SizedBox(
         width: width,
@@ -34,7 +34,7 @@ class MuteNotification extends StatelessWidget {
                 "Mute Notifications",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
@@ -50,7 +50,7 @@ class MuteNotification extends StatelessWidget {
                   Buttonwidget(
                     btnwidth: mediaQuery.width * 0.3,
                     text: "Cancel",
-                    borderColor: Colors.cyanAccent,
+                    borderColor: AppColors.primaryColor,
                     ontapped: () => Get.back(),
                   ),
                   // BuildButton(
@@ -62,7 +62,7 @@ class MuteNotification extends StatelessWidget {
                   Buttonwidget(
                     btnwidth: mediaQuery.width * 0.3,
                     text: "Mute",
-                    color: Colors.cyanAccent,
+                    color: AppColors.primaryColor,
                     ontapped: () {
                       onMute();
                       Get.back();
@@ -70,7 +70,7 @@ class MuteNotification extends StatelessWidget {
                   ),
                   // BuildButton(
                   //   text: "Mute",
-                  //   bgColor: AppColors.typingColor,
+                  //   bgColor: AppColors.textFieldColor,
                   //   textColor: AppColors.white,
                   //   onTap: () {
                   //     onMute();
@@ -94,8 +94,8 @@ class MuteNotification extends StatelessWidget {
         onChanged: (value) {
           selectedMuteOption.value = value!;
         },
-        title: Text(label, style: const TextStyle(color: Colors.white)),
-        activeColor: AppColors.typingColor,
+        title: Text(label, style: const TextStyle(color: AppColors.white)),
+        activeColor: AppColors.primaryColor,
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/controllers/utils/models/trasnsaction.dart';
 import 'package:syntic_earth/views/screens/wallet/transfer_management.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
@@ -67,12 +68,12 @@ class WalletManagement extends StatelessWidget {
     final height = size.height;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: Column(
         children: [
           const CustomWalletAppBar(
             title: "Wallet",
-            iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+            iconData: Icon(Icons.arrow_back_ios_new, color: AppColors.white),
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -89,7 +90,7 @@ class WalletManagement extends StatelessWidget {
                       width: double.infinity,
                       padding: EdgeInsets.all(width * 0.04),
                       decoration: BoxDecoration(
-                        color: Color(0xFF151515),
+                        color: AppColors.textFieldColor,
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Column(
@@ -103,10 +104,10 @@ class WalletManagement extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: width * 0.04,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                 ),
                               ),
-                              Icon(Icons.more_horiz, color: Colors.white),
+                              Icon(Icons.more_horiz, color: AppColors.white),
                             ],
                           ),
                           SizedBox(height: height * 0.01),
@@ -115,7 +116,7 @@ class WalletManagement extends StatelessWidget {
                             style: TextStyle(
                               fontSize: width * 0.07,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: AppColors.white,
                             ),
                           ),
                           SizedBox(height: height * 0.02),
@@ -159,13 +160,13 @@ class WalletManagement extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: width * 0.045,
-                            color: Colors.white,
+                            color: AppColors.white,
                           ),
                         ),
                         Text(
                           "See all",
                           style: TextStyle(
-                            color: Colors.cyanAccent,
+                            color: AppColors.primaryColor,
                             fontSize: width * 0.035,
                           ),
                         ),
@@ -183,7 +184,7 @@ class WalletManagement extends StatelessWidget {
                             entry.key,
                             style: TextStyle(
                               fontSize: width * 0.035,
-                              color: Colors.grey,
+                              color: AppColors.grey,
                             ),
                           ),
                           ...entry.value.map((tx) => TransactionTile(tx: tx)),

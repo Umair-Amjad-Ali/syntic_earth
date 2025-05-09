@@ -33,7 +33,7 @@ class CustomChatAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         title,
         style: TextStyle(
-          color: Colors.white,
+          color: AppColors.white,
           fontSize: screenWidth * 0.05,
           fontWeight: FontWeight.bold,
         ),
@@ -41,14 +41,18 @@ class CustomChatAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       actions: [
         IconButton(
-          icon: Icon(Icons.notifications, color: Colors.white, size: iconSize),
+          icon: Icon(
+            Icons.notifications,
+            color: AppColors.white,
+            size: iconSize,
+          ),
           onPressed: () {
             // Get.toNamed(AppRoutes.notificationScreen);
           },
         ),
         PopupMenuButton<String>(
-          icon: Icon(Icons.menu, color: Colors.white, size: iconSize),
-          color: Colors.grey[900],
+          icon: Icon(Icons.menu, color: AppColors.white, size: iconSize),
+          color: AppColors.secondaryColor,
           offset: const Offset(0, 50),
           onSelected: (value) {
             if (value == 'Plan') {
@@ -74,7 +78,7 @@ class CustomChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   PopupMenuItem<String> _buildMenuItem(String text) {
     return PopupMenuItem<String>(
       value: text,
-      child: Text(text, style: TextStyle(color: Colors.white, fontSize: 16)),
+      child: Text(text, style: TextStyle(color: AppColors.white, fontSize: 16)),
     );
   }
 }

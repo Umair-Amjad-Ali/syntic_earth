@@ -416,6 +416,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                         child: Text(
                                           "1360.15% \u2191",
                                           style: TextStyle(
+                                            overflow: TextOverflow.ellipsis,
                                             color: Colors.cyanAccent,
                                           ),
                                         ),
@@ -459,7 +460,10 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
                                           "-100.00% \u2193",
-                                          style: TextStyle(color: Colors.red),
+                                          style: TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            color: Colors.red,
+                                          ),
                                         ),
                                       ),
                                     ),

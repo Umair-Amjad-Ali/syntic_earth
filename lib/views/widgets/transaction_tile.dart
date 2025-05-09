@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/controllers/utils/models/trasnsaction.dart';
 
 class TransactionTile extends StatelessWidget {
@@ -14,7 +15,7 @@ class TransactionTile extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 8),
       padding: EdgeInsets.all(width * 0.04),
       decoration: BoxDecoration(
-        color: Color(0xFF1D1D1D),
+        color: AppColors.textFieldColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
@@ -22,10 +23,10 @@ class TransactionTile extends StatelessWidget {
           CircleAvatar(
             radius: width * 0.06,
             backgroundColor:
-                tx.isIncoming ? Colors.cyanAccent : Colors.pinkAccent,
+                tx.isIncoming ? AppColors.primaryColor : AppColors.alert,
             child: Icon(
               tx.isIncoming ? Icons.arrow_downward : Icons.arrow_upward,
-              color: Colors.black,
+              color: AppColors.black,
               size: width * 0.05,
             ),
           ),
@@ -38,13 +39,13 @@ class TransactionTile extends StatelessWidget {
                   tx.name,
                   style: TextStyle(
                     fontSize: width * 0.045,
-                    color: Colors.white,
+                    color: AppColors.white,
                   ),
                 ),
                 Text(
                   tx.time,
                   style: TextStyle(
-                    color: Colors.grey[400],
+                    color: AppColors.textColor,
                     fontSize: width * 0.03,
                   ),
                 ),
@@ -54,7 +55,7 @@ class TransactionTile extends StatelessWidget {
           Text(
             "${tx.isIncoming ? "+" : "-"}\$${tx.amount.abs()}",
             style: TextStyle(
-              color: tx.isIncoming ? Colors.greenAccent : Colors.redAccent,
+              color: tx.isIncoming ? AppColors.primaryColor : AppColors.alert,
               fontWeight: FontWeight.bold,
               fontSize: width * 0.04,
             ),

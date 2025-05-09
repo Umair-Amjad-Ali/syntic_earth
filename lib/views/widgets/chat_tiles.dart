@@ -43,7 +43,7 @@ class ChatTile extends StatelessWidget {
         child: Container(
           color:
               isSelected
-                  ? AppColors.typingColor.withOpacity(0.25)
+                  ? AppColors.textFieldColor.withOpacity(0.25)
                   : AppColors.bgColor,
           padding: EdgeInsets.symmetric(
             vertical: padding * 0.5,
@@ -63,10 +63,10 @@ class ChatTile extends StatelessWidget {
                       right: 0,
                       child: CircleAvatar(
                         radius: avatarSize * 0.2,
-                        backgroundColor: AppColors.typingColor,
+                        backgroundColor: AppColors.textFieldColor,
                         child: const Icon(
                           Icons.check,
-                          color: Colors.white,
+                          color: AppColors.white,
                           size: 12,
                         ),
                       ),
@@ -110,7 +110,7 @@ class ChatTile extends StatelessWidget {
                               fontSize: messageFontSize,
                               color:
                                   chat.isTyping
-                                      ? AppColors.typingColor
+                                      ? AppColors.primaryColor
                                       : AppColors.grey,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -134,7 +134,7 @@ class ChatTile extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(screenWidth * 0.015),
                       decoration: const BoxDecoration(
-                        color: AppColors.typingColor,
+                        color: AppColors.primaryColor,
                         shape: BoxShape.circle,
                       ),
                       child: Text(
@@ -168,9 +168,9 @@ class ChatTile extends StatelessWidget {
     switch (status) {
       case MessageStatus.sent:
       case MessageStatus.delivered:
-        return Colors.grey;
+        return AppColors.grey;
       case MessageStatus.seen:
-        return Colors.blue;
+        return AppColors.primaryColor;
     }
   }
 }

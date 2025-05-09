@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/marketplace_card.dart';
 
@@ -82,12 +83,12 @@ class MarketplaceScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final width = size.width;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: Column(
         children: [
           CustomWalletAppBar(
             title: "MarketPlace",
-            iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+            iconData: Icon(Icons.arrow_back_ios_new, color: AppColors.white),
           ),
           Expanded(
             child: Padding(
