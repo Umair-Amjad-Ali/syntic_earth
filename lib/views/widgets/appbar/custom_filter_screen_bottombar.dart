@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class CustomFilterScreenBottombar extends StatelessWidget {
   final int selectedIndex;
@@ -21,7 +22,7 @@ class CustomFilterScreenBottombar extends StatelessWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xFF1B1C2B),
+        color: AppColors.filterbgColor,
         // borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
@@ -35,7 +36,7 @@ class CustomFilterScreenBottombar extends StatelessWidget {
             onTap: () => onTap(index),
             child: Icon(
               item["icon"],
-              color: isSelected ? Color(0xFF28E1C7) : Colors.white54,
+              color: isSelected ? AppColors.primaryColor : AppColors.textColor,
             ),
           );
         }),

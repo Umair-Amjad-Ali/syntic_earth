@@ -90,7 +90,7 @@ class CustomFilteredDataCard extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Buttonwidget(
-                      borderColor: Colors.cyanAccent,
+                      borderColor: AppColors.primaryColor,
                       text: "View",
                       ontapped: ontap,
                     ),
@@ -98,7 +98,7 @@ class CustomFilteredDataCard extends StatelessWidget {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Buttonwidget(
-                      color: Colors.cyanAccent,
+                      color: AppColors.primaryColor,
                       text: "Buy",
                       ontapped: ontapbuy,
                     ),
@@ -120,13 +120,13 @@ Widget _labelValue(String label, String value) {
       SizedBox(
         child: Text(
           label,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
         ),
       ),
       SizedBox(
         child: Text(
           value,
-          style: TextStyle(color: Colors.white70, fontSize: 12),
+          style: TextStyle(color: AppColors.textColor, fontSize: 12),
           overflow: TextOverflow.ellipsis,
         ),
       ),

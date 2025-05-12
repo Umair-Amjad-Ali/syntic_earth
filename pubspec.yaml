@@ -67,6 +67,8 @@ flutter:
     - assets/images/bg_image.png
     - assets/images/logo.png
     - assets/images/google.svg
+    - assets/images/paypal.svg
+    - assets/images/mastercard.svg
     - assets/images/apple.svg
     - assets/images/vector.png
     - assets/images/user.jpg

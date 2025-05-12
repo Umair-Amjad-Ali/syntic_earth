@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/dropdown_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/filtered_data_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_filter_screen_appbar.dart';
 import 'package:syntic_earth/views/widgets/custom_dropdown.dart';
@@ -23,13 +24,13 @@ class DropdownScreen extends StatelessWidget {
           );
         },
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(height: mediaQuery.height * 0.03),
             Container(
-              color: Color(0xFF1B1C2B),
+              color: AppColors.filterbgColor,
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 16,
@@ -66,7 +67,7 @@ class DropdownScreen extends StatelessWidget {
                                 Text(
                                   "Filter by Country",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                     // fontSize: 12,
                                   ),
@@ -88,7 +89,7 @@ class DropdownScreen extends StatelessWidget {
                                     ),
 
                                     decoration: BoxDecoration(
-                                      color: Color(0xff313150),
+                                      color: AppColors.secondaryColor,
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: Row(
@@ -102,13 +103,13 @@ class DropdownScreen extends StatelessWidget {
                                                 ? "Select Country"
                                                 : "${country.flagEmoji} ${country.name}",
                                             style: TextStyle(
-                                              color: Colors.white,
+                                              color: AppColors.textColor,
                                             ),
                                           ),
                                         ),
                                         Icon(
                                           Icons.keyboard_arrow_down,
-                                          color: Colors.white,
+                                          color: AppColors.white,
                                         ),
                                       ],
                                     ),
@@ -168,7 +169,7 @@ class DropdownScreen extends StatelessWidget {
                             // textAlign: TextAlign.start,
                             "Filter By Land Size",
                             style: const TextStyle(
-                              color: Colors.white,
+                              color: AppColors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 14,
                             ),
@@ -178,7 +179,7 @@ class DropdownScreen extends StatelessWidget {
                         Inputfield(
                           hinttext: "Type...",
                           sufficon: Icon(Icons.search),
-                          sufficoncolor: Colors.white,
+                          sufficoncolor: AppColors.textColor,
                         ),
                       ],
                     ),

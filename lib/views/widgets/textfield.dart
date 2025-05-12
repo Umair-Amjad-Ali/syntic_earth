@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class Inputfield extends StatelessWidget {
   final Widget? sufficon;
@@ -51,10 +52,10 @@ class Inputfield extends StatelessWidget {
       controller: controller,
       validator: _validate,
       style: TextStyle(
-        color: Color(0xffb8c2ff),
+        color: AppColors.textColor,
         fontSize: mediaQuery.width * 0.04,
       ),
-      cursorColor: Color(0xffb8c2ff),
+      cursorColor: AppColors.textColor,
       obscureText: obsecuretext,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
@@ -68,13 +69,13 @@ class Inputfield extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(mediaQuery.width * 0.015),
-          borderSide: BorderSide(color: Color(0xff0AF9E6)),
+          borderSide: BorderSide(color: AppColors.primaryColor),
         ),
         labelStyle: TextStyle(
-          color: Color(0xffb8c2ff),
+          color: AppColors.textColor,
           fontSize: mediaQuery.width * 0.04,
         ),
-        fillColor: Color(0xff313150),
+        fillColor: AppColors.secondaryColor,
         filled: true,
         hintText: hinttext,
         suffixIcon:
@@ -89,7 +90,7 @@ class Inputfield extends StatelessWidget {
         suffixIconColor: sufficoncolor,
 
         hintStyle: TextStyle(
-          color: Color(0xffb8c2ff),
+          color: AppColors.textColor,
           fontSize: mediaQuery.width * 0.04,
         ),
       ),

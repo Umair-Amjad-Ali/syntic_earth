@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
+import 'package:syntic_earth/views/screens/payment_methods_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 import 'package:syntic_earth/views/widgets/custom_filtered_data_card.dart';
@@ -13,14 +15,17 @@ class ViewLandDetailsScreen extends StatelessWidget {
     Size mediaQuery = MediaQuery.of(context).size;
     final isSmallScreen = mediaQuery.width < 360;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               CustomWalletAppBar(
                 title: "View Land",
-                iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+                iconData: Icon(
+                  Icons.arrow_back_ios_new,
+                  color: AppColors.white,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -43,7 +48,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                     Text(
                       "EPL",
                       style: TextStyle(
-                        color: const Color(0xFF28E1C7),
+                        color: AppColors.primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: isSmallScreen ? 14 : 16,
                       ),
@@ -57,11 +62,11 @@ class ViewLandDetailsScreen extends StatelessWidget {
                           horizontal: mediaQuery.width * 0.02,
                         ),
                         decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xFF253049)),
+                          border: Border.all(color: AppColors.secondaryColor),
                         ),
                         child: Text(
                           "ea225a29-a11d-45fb-af4f-7170dfb9fc21",
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(color: AppColors.textColor),
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -70,14 +75,14 @@ class ViewLandDetailsScreen extends StatelessWidget {
                     // Copy Icon
                     Icon(
                       Icons.copy_all_outlined,
-                      color: const Color(0xFF28E1C7),
+                      color: AppColors.primaryColor,
                       size: isSmallScreen ? 18 : 22,
                     ),
                     const SizedBox(width: 8),
                     // Share Icon
                     Icon(
                       Icons.share,
-                      color: const Color(0xFF28E1C7),
+                      color: AppColors.primaryColor,
                       size: isSmallScreen ? 18 : 22,
                     ),
                   ],
@@ -100,7 +105,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
               Container(
                 alignment: Alignment.topLeft,
                 width: mediaQuery.width,
-                decoration: BoxDecoration(color: Color(0xFF1B1C2B)),
+                decoration: BoxDecoration(color: AppColors.textFieldColor),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,
@@ -112,13 +117,13 @@ class ViewLandDetailsScreen extends StatelessWidget {
                       Text(
                         "Property Deed",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: AppColors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         "b87abca-f6a5-445f-b482-792dd40e986",
-                        style: TextStyle(color: Colors.white70),
+                        style: TextStyle(color: AppColors.textColor),
                       ),
                       SizedBox(height: mediaQuery.height * 0.02),
                       Text(
@@ -136,14 +141,14 @@ class ViewLandDetailsScreen extends StatelessWidget {
                               radius: 12,
                               child: Icon(
                                 Icons.person,
-                                color: Color(0xFF253049),
+                                color: AppColors.filterbgColor,
                               ),
                             ),
                             SizedBox(width: mediaQuery.width * 0.03),
 
                             Text(
                               userData["countryName"],
-                              style: TextStyle(color: Colors.white70),
+                              style: TextStyle(color: AppColors.textColor),
                             ),
                           ],
                         ),
@@ -153,25 +158,25 @@ class ViewLandDetailsScreen extends StatelessWidget {
                       Text(
                         "Description",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: AppColors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         "Discounts and sales on everything visit profile",
-                        style: TextStyle(color: Colors.white70),
+                        style: TextStyle(color: AppColors.textColor),
                       ),
                       SizedBox(height: mediaQuery.height * 0.02),
                       Text(
                         "Location",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: AppColors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         "Sham Shui Po District, Hong Kong",
-                        style: TextStyle(color: Colors.white70),
+                        style: TextStyle(color: AppColors.textColor),
                       ),
                       SizedBox(height: mediaQuery.height * 0.03),
                       Row(
@@ -184,13 +189,13 @@ class ViewLandDetailsScreen extends StatelessWidget {
                               Text(
                                 "Mentar",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 "Active",
-                                style: TextStyle(color: Colors.white70),
+                                style: TextStyle(color: AppColors.textColor),
                               ),
                             ],
                           ),
@@ -200,13 +205,13 @@ class ViewLandDetailsScreen extends StatelessWidget {
                               Text(
                                 "Land Class",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 "3",
-                                style: TextStyle(color: Colors.white70),
+                                style: TextStyle(color: AppColors.textColor),
                               ),
                             ],
                           ),
@@ -216,13 +221,13 @@ class ViewLandDetailsScreen extends StatelessWidget {
                               Text(
                                 "Tier",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 "T1",
-                                style: TextStyle(color: Colors.white70),
+                                style: TextStyle(color: AppColors.textColor),
                               ),
                             ],
                           ),
@@ -232,13 +237,13 @@ class ViewLandDetailsScreen extends StatelessWidget {
                               Text(
                                 "Tiles",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: AppColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 "45",
-                                style: TextStyle(color: Colors.white70),
+                                style: TextStyle(color: AppColors.textColor),
                               ),
                             ],
                           ),
@@ -256,14 +261,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "Min. Essence",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "193.2849",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -275,14 +282,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "Essence Transformed",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "127.64",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -301,14 +310,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "Purchased For",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "ES27.50",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -320,14 +331,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "New Land Value (T1)",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "ES401.50",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -346,14 +359,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "New Land Value (T1)",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "ES36.50",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -365,14 +380,16 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                 Text(
                                   "New Land Value (T1)",
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: AppColors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 SizedBox(height: mediaQuery.height * 0.005),
                                 Text(
                                   "ES39.50",
-                                  style: TextStyle(color: Colors.cyanAccent),
+                                  style: TextStyle(
+                                    color: AppColors.primaryColor,
+                                  ),
                                 ),
                               ],
                             ),
@@ -386,7 +403,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Color(0xFF253049),
+                                color: AppColors.secondaryColor,
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Padding(
@@ -396,20 +413,24 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                     Text(
                                       "Buy Now For",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: AppColors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       "ES0.05",
-                                      style: TextStyle(color: Colors.white70),
+                                      style: TextStyle(
+                                        color: AppColors.textColor,
+                                      ),
                                     ),
                                     SizedBox(height: mediaQuery.height * 0.01),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF253049),
+                                        color: AppColors.secondaryColor,
                                         borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(color: Colors.grey),
+                                        border: Border.all(
+                                          color: AppColors.grey,
+                                        ),
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -417,7 +438,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                           "1360.15% \u2191",
                                           style: TextStyle(
                                             overflow: TextOverflow.ellipsis,
-                                            color: Colors.cyanAccent,
+                                            color: AppColors.primaryColor,
                                           ),
                                         ),
                                       ),
@@ -431,7 +452,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                           Expanded(
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Color(0xFF253049),
+                                color: AppColors.secondaryColor,
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Padding(
@@ -441,20 +462,24 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                     Text(
                                       "Buy Now For",
                                       style: TextStyle(
-                                        color: Colors.white,
+                                        color: AppColors.white,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       "ES0.05",
-                                      style: TextStyle(color: Colors.white70),
+                                      style: TextStyle(
+                                        color: AppColors.textColor,
+                                      ),
                                     ),
                                     SizedBox(height: mediaQuery.height * 0.01),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF253049),
+                                        color: AppColors.secondaryColor,
                                         borderRadius: BorderRadius.circular(8),
-                                        border: Border.all(color: Colors.grey),
+                                        border: Border.all(
+                                          color: AppColors.grey,
+                                        ),
                                       ),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -462,7 +487,7 @@ class ViewLandDetailsScreen extends StatelessWidget {
                                           "-100.00% \u2193",
                                           style: TextStyle(
                                             overflow: TextOverflow.ellipsis,
-                                            color: Colors.red,
+                                            color: AppColors.alert,
                                           ),
                                         ),
                                       ),
@@ -478,32 +503,43 @@ class ViewLandDetailsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Buttonwidget(
-                        text: "View",
-                        borderColor: Colors.cyanAccent,
+              Container(
+                color: AppColors.textFieldColor,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Buttonwidget(
+                          text: "View",
+                          borderColor: AppColors.primaryColor,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: mediaQuery.width * 0.04),
-                    Expanded(
-                      child: Buttonwidget(
-                        text: "Buy",
-                        color: Colors.cyanAccent,
+                      SizedBox(width: mediaQuery.width * 0.04),
+                      Expanded(
+                        child: Buttonwidget(
+                          text: "Buy",
+                          color: AppColors.primaryColor,
+                          ontapped: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PaymentMethodsScreen(),
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-                    SizedBox(width: mediaQuery.width * 0.04),
-                    Expanded(
-                      child: Buttonwidget(
-                        text: "Bid",
-                        borderColor: Colors.cyanAccent,
+                      SizedBox(width: mediaQuery.width * 0.04),
+                      Expanded(
+                        child: Buttonwidget(
+                          text: "Bid",
+                          borderColor: AppColors.primaryColor,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
