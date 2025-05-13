@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:syntic_earth/controllers/utils/app_color.dart';
 
@@ -15,8 +14,12 @@ class CustomWalletAppBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    final topPadding = MediaQuery.of(context).padding.top;
-    final width = MediaQuery.of(context).size.width;
+    final mediaQuery = MediaQuery.of(context);
+    final width = mediaQuery.size.width;
+    final topPadding = mediaQuery.padding.top;
+
+    final double fontSize = width.clamp(320.0, 600.0) * 0.045;
+    final double iconContainerSize = width * 0.1; 
 
     return Container(
       padding: EdgeInsets.only(
@@ -26,33 +29,41 @@ class CustomWalletAppBar extends StatelessWidget
         bottom: 12,
       ),
       color: AppColors.bgColor,
-      child: Stack(
-        alignment: Alignment.center,
+      child: Row(
         children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: GestureDetector(
-              onTap: () => Navigator.pop(context),
-              child: Container(
-                padding: EdgeInsets.all(width * 0.02),
-                decoration: BoxDecoration(
-                  color: AppColors.secondaryColor,
-                  shape: BoxShape.circle,
+          GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: Container(
+              width: iconContainerSize,
+              height: iconContainerSize,
+              decoration: BoxDecoration(
+                color: AppColors.secondaryColor,
+                shape: BoxShape.circle,
+              ),
+              child: Center(
+                child: Icon(
+                  iconData.icon,
+                  color: iconData.color,
+                  size: fontSize,
                 ),
-                child: iconData,
               ),
             ),
           ),
-          Center(
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: width * 0.05,
-                fontWeight: FontWeight.bold,
-                color: AppColors.white,
+
+          Expanded(
+            child: Center(
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: fontSize,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.white,
+                ),
               ),
             ),
           ),
+
+          SizedBox(width: iconContainerSize, height: iconContainerSize),
         ],
       ),
     );

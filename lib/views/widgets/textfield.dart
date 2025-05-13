@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/textfield_controller.dart';
@@ -48,19 +50,20 @@ class Inputfield extends StatelessWidget {
   Widget build(BuildContext context) {
     Size mediaQuery = MediaQuery.of(context).size;
 
+    double fontSize = mediaQuery.width.clamp(320.0, 600.0) * 0.04;
+    double verticalPadding = min(mediaQuery.height * 0.015, 16.0);
+    double horizontalPadding = min(mediaQuery.width * 0.035, 16.0);
+
     return TextFormField(
       controller: controller,
       validator: _validate,
-      style: TextStyle(
-        color: AppColors.textColor,
-        fontSize: mediaQuery.width * 0.04,
-      ),
+      style: TextStyle(color: AppColors.textColor, fontSize: fontSize),
       cursorColor: AppColors.textColor,
       obscureText: obsecuretext,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(
-          horizontal: mediaQuery.width * 0.035,
-          vertical: mediaQuery.height * 0.015,
+          horizontal: horizontalPadding,
+          vertical: verticalPadding,
         ),
         border: OutlineInputBorder(),
         enabledBorder: OutlineInputBorder(
@@ -71,10 +74,7 @@ class Inputfield extends StatelessWidget {
           borderRadius: BorderRadius.circular(mediaQuery.width * 0.015),
           borderSide: BorderSide(color: AppColors.primaryColor),
         ),
-        labelStyle: TextStyle(
-          color: AppColors.textColor,
-          fontSize: mediaQuery.width * 0.04,
-        ),
+        labelStyle: TextStyle(color: AppColors.textColor, fontSize: fontSize),
         fillColor: AppColors.secondaryColor,
         filled: true,
         hintText: hinttext,
@@ -89,10 +89,7 @@ class Inputfield extends StatelessWidget {
                 : sufficon,
         suffixIconColor: sufficoncolor,
 
-        hintStyle: TextStyle(
-          color: AppColors.textColor,
-          fontSize: mediaQuery.width * 0.04,
-        ),
+        hintStyle: TextStyle(color: AppColors.textColor, fontSize: fontSize),
       ),
     );
   }

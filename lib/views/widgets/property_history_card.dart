@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class PropertyHistoryCard extends StatelessWidget {
   final String date;
@@ -21,7 +22,7 @@ class PropertyHistoryCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       decoration: BoxDecoration(
-        color: const Color(0xFF141424), // Main card background
+        color: AppColors.textFieldColor, // Main card background
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -31,7 +32,7 @@ class PropertyHistoryCard extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
             decoration: const BoxDecoration(
-              color: Color(0xFF2D2B50),
+              color: AppColors.secondaryColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(12),
                 topRight: Radius.circular(12),
@@ -42,12 +43,12 @@ class PropertyHistoryCard extends StatelessWidget {
               children: [
                 const Text(
                   'Date : ',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  style: TextStyle(color: AppColors.white, fontSize: 14),
                 ),
                 Text(
                   date,
                   style: const TextStyle(
-                    color: Color(0xFF7D7DFF),
+                    color: AppColors.historyScreenTextColor,
                     fontSize: 14,
                   ),
                 ),
@@ -94,7 +95,7 @@ class PropertyHistoryCard extends StatelessWidget {
                       child: _buildLabelValuePair(
                         'From',
                         from,
-                        valueColor: Colors.white70,
+                        valueColor: AppColors.textColor,
                       ),
                     ),
                     SizedBox(width: 20),
@@ -102,7 +103,7 @@ class PropertyHistoryCard extends StatelessWidget {
                       child: _buildLabelValuePair(
                         'To',
                         to,
-                        valueColor: Colors.cyanAccent,
+                        valueColor: AppColors.primaryColor,
                       ),
                     ),
                   ],
@@ -118,7 +119,7 @@ class PropertyHistoryCard extends StatelessWidget {
   Widget _buildLabelValuePair(
     String label,
     String value, {
-    Color valueColor = Colors.white,
+    Color valueColor = AppColors.textColor,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +127,7 @@ class PropertyHistoryCard extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Colors.white,
+            color: AppColors.white,
             fontSize: 13,
             fontWeight: FontWeight.w700,
           ),

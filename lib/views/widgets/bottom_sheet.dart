@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/screens/bidding_history_screen.dart';
 import 'package:syntic_earth/views/screens/property_history_screen.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
@@ -21,7 +22,7 @@ class BottomSheetWidget extends StatelessWidget {
             width: 40,
             height: 4,
             decoration: BoxDecoration(
-              color: Colors.grey[700],
+              color: AppColors.grey,
               borderRadius: BorderRadius.circular(4),
             ),
           ),
@@ -32,14 +33,14 @@ class BottomSheetWidget extends StatelessWidget {
           const SizedBox(height: 12),
           const CircleAvatar(
             radius: 30,
-            backgroundColor: Colors.tealAccent,
-            child: Icon(Icons.person, color: Colors.black, size: 30),
+            backgroundColor: AppColors.primaryColor,
+            child: Icon(Icons.person, color: AppColors.black, size: 30),
           ),
           const SizedBox(height: 8),
           const Text(
             "User23324324",
             style: TextStyle(
-              color: Colors.white,
+              color: AppColors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -51,17 +52,17 @@ class BottomSheetWidget extends StatelessWidget {
             children: [
               Text(
                 "RAID-SET Yau Tsim Mong District, Hong Kong",
-                style: TextStyle(color: Colors.white, fontSize: 14),
+                style: TextStyle(color: AppColors.white, fontSize: 14),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 4),
               Text(
                 "Yau Tsim Mong District, Hong Kong",
-                style: TextStyle(color: Colors.grey, fontSize: 12),
+                style: TextStyle(color: AppColors.grey, fontSize: 12),
               ),
               Text(
                 "@ (22.324195, 114.17284)",
-                style: TextStyle(color: Colors.grey, fontSize: 12),
+                style: TextStyle(color: AppColors.grey, fontSize: 12),
               ),
             ],
           ),
@@ -78,7 +79,7 @@ class BottomSheetWidget extends StatelessWidget {
             height: 45,
             child: Buttonwidget(
               text: "Property info",
-              color: Colors.cyanAccent,
+              color: AppColors.primaryColor,
             ),
           ),
 
@@ -101,7 +102,7 @@ class BottomSheetWidget extends StatelessWidget {
                 Expanded(
                   child: Buttonwidget(
                     text: "Bidding History",
-                    borderColor: Colors.cyanAccent,
+                    borderColor: AppColors.primaryColor,
                     ontapped:
                         () => Navigator.push(
                           context,
@@ -115,7 +116,7 @@ class BottomSheetWidget extends StatelessWidget {
                 Expanded(
                   child: Buttonwidget(
                     text: "Property History",
-                    color: Colors.cyanAccent,
+                    color: AppColors.primaryColor,
                     ontapped:
                         () => Navigator.push(
                           context,
@@ -137,11 +138,11 @@ class BottomSheetWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, color: Colors.cyanAccent, size: 18),
+        Icon(icon, color: AppColors.primaryColor, size: 18),
         const SizedBox(width: 5),
         Text(
           text,
-          style: const TextStyle(color: Colors.cyanAccent, fontSize: 14),
+          style: const TextStyle(color: AppColors.primaryColor, fontSize: 14),
         ),
       ],
     );
@@ -151,11 +152,11 @@ class BottomSheetWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("$label: ", style: const TextStyle(color: Colors.white)),
-        Text("$value ", style: const TextStyle(color: Colors.cyanAccent)),
-        const Text("(Per Tile: ", style: TextStyle(color: Colors.white)),
-        Text(perTile, style: const TextStyle(color: Colors.redAccent)),
-        const Text(")", style: TextStyle(color: Colors.white)),
+        Text("$label: ", style: const TextStyle(color: AppColors.white)),
+        Text("$value ", style: const TextStyle(color: AppColors.primaryColor)),
+        const Text("(Per Tile: ", style: TextStyle(color: AppColors.white)),
+        Text(perTile, style: const TextStyle(color: AppColors.alert)),
+        const Text(")", style: TextStyle(color: AppColors.white)),
       ],
     );
   }
@@ -183,9 +184,9 @@ class BottomSheetWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(title, style: const TextStyle(color: Colors.grey)),
+          Text(title, style: const TextStyle(color: AppColors.grey)),
           const SizedBox(height: 4),
-          Text(value, style: const TextStyle(color: Colors.white)),
+          Text(value, style: const TextStyle(color: AppColors.white)),
         ],
       ),
     );
@@ -200,16 +201,16 @@ class BottomSheetWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Text(title, style: const TextStyle(color: Colors.grey)),
+          Text(title, style: const TextStyle(color: AppColors.grey)),
           const SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(value, style: const TextStyle(color: Colors.redAccent)),
+              Text(value, style: const TextStyle(color: AppColors.alert)),
               const SizedBox(width: 4),
               Text(
                 change,
-                style: const TextStyle(color: Colors.redAccent, fontSize: 12),
+                style: const TextStyle(color: AppColors.alert, fontSize: 12),
               ),
             ],
           ),
@@ -219,290 +220,3 @@ class BottomSheetWidget extends StatelessWidget {
   }
 }
 
-// import 'package:flutter/material.dart';
-// import 'package:syntic_earth/views/screens/bidding_history_screen.dart';
-// import 'package:syntic_earth/views/screens/property_history_screen.dart';
-// import 'package:syntic_earth/views/widgets/button.dart';
-
-// class BottomSheetWidget extends StatelessWidget {
-//   const BottomSheetWidget({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       mainAxisSize: MainAxisSize.min,
-//       children: [
-//         // Small Dash at the top
-//         Container(
-//           margin: const EdgeInsets.only(top: 8, bottom: 16),
-//           width: 40,
-//           height: 4,
-//           decoration: BoxDecoration(
-//             color: Colors.grey[700],
-//             borderRadius: BorderRadius.circular(4),
-//           ),
-//         ),
-
-//         // Tiles In Total
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Icon(Icons.grid_view, color: Colors.cyanAccent),
-//             SizedBox(width: 5),
-//             const Text(
-//               "20 Tiles In Total",
-//               style: TextStyle(color: Colors.cyanAccent, fontSize: 14),
-//             ),
-//           ],
-//         ),
-
-//         const SizedBox(height: 12),
-
-//         // User Avatar
-//         const CircleAvatar(
-//           radius: 30,
-//           backgroundColor: Colors.tealAccent,
-//           child: Icon(Icons.person, color: Colors.black, size: 30),
-//         ),
-
-//         const SizedBox(height: 8),
-
-//         // Username
-//         const Text(
-//           "User23324324",
-//           style: TextStyle(
-//             color: Colors.white,
-//             fontSize: 18,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//         const SizedBox(height: 8),
-
-//         // Username
-//         const Text("🇯🇵", style: TextStyle(fontSize: 25)),
-
-//         const SizedBox(height: 8),
-
-//         // Location
-//         Column(
-//           children: const [
-//             Text(
-//               "RAID-SET Yau Tsim Mong District, Hong Kong",
-//               style: TextStyle(color: Colors.white, fontSize: 14),
-//               textAlign: TextAlign.center,
-//             ),
-//             SizedBox(height: 4),
-//             Text(
-//               "Yau Tsim Mong District, Hong Kong",
-//               style: TextStyle(color: Colors.grey, fontSize: 12),
-//             ),
-//             SizedBox(height: 4),
-//             Text(
-//               "@ (22.324195, 114.17284)",
-//               style: TextStyle(color: Colors.grey, fontSize: 12),
-//             ),
-//           ],
-//         ),
-
-//         const SizedBox(height: 16),
-
-//         // Market Values
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Text("Market Value: ", style: TextStyle(color: Colors.white)),
-//             Text("E\$150.00 ", style: TextStyle(color: Colors.cyanAccent)),
-//             Text("(Per Tile: ", style: TextStyle(color: Colors.white)),
-//             Text("E\$50.200", style: TextStyle(color: Colors.redAccent)),
-//             Text(")", style: TextStyle(color: Colors.white)),
-//           ],
-//         ),
-
-//         const SizedBox(height: 4),
-
-//         Row(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Text("New land value: ", style: TextStyle(color: Colors.white)),
-//             Text("E\$150.00 ", style: TextStyle(color: Colors.cyanAccent)),
-//             Text("(Per Tile: ", style: TextStyle(color: Colors.white)),
-//             Text("E\$50.200", style: TextStyle(color: Colors.redAccent)),
-//             Text(")", style: TextStyle(color: Colors.white)),
-//           ],
-//         ),
-
-//         const SizedBox(height: 16),
-
-//         // Property Info Button
-//         SizedBox(
-//           width: 200,
-//           height: 45,
-//           child: Buttonwidget(text: "Property info", color: Colors.cyanAccent),
-//         ),
-
-//         const SizedBox(height: 16),
-
-//         // Bids Section
-//         Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-//           child: Row(
-//             children: [
-//               // No Bids
-//               Expanded(
-//                 child: Container(
-//                   padding: const EdgeInsets.all(12),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey[850],
-//                     borderRadius: BorderRadius.circular(8),
-//                   ),
-//                   child: Column(
-//                     children: const [
-//                       Text("No bids", style: TextStyle(color: Colors.grey)),
-//                       SizedBox(height: 4),
-//                       Text("Bid", style: TextStyle(color: Colors.white)),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-
-//               const SizedBox(width: 8),
-
-//               // Your Offer
-//               Expanded(
-//                 child: Container(
-//                   padding: const EdgeInsets.all(12),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey[850],
-//                     borderRadius: BorderRadius.circular(8),
-//                   ),
-//                   child: Column(
-//                     children: const [
-//                       Text("Your Offer", style: TextStyle(color: Colors.grey)),
-//                       SizedBox(height: 4),
-//                       Text("Offer", style: TextStyle(color: Colors.white)),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-
-//         const SizedBox(height: 12),
-
-//         // Price and Market Value
-//         Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 16.0),
-//           child: Row(
-//             children: [
-//               // Price
-//               Expanded(
-//                 child: Container(
-//                   padding: const EdgeInsets.all(12),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey[850],
-//                     borderRadius: BorderRadius.circular(8),
-//                   ),
-//                   child: Column(
-//                     children: const [
-//                       Text("Price", style: TextStyle(color: Colors.grey)),
-//                       SizedBox(height: 4),
-//                       Text(
-//                         "E\$1,000.00",
-//                         style: TextStyle(color: Colors.white),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-
-//               const SizedBox(width: 8),
-
-//               // Market Value
-//               Expanded(
-//                 child: Container(
-//                   padding: const EdgeInsets.all(12),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey[850],
-//                     borderRadius: BorderRadius.circular(8),
-//                   ),
-//                   child: Column(
-//                     children: [
-//                       const Text(
-//                         "Market Value",
-//                         style: TextStyle(color: Colors.grey),
-//                       ),
-//                       const SizedBox(height: 4),
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.center,
-//                         children: const [
-//                           Text(
-//                             "E\$150.00 ",
-//                             style: TextStyle(color: Colors.redAccent),
-//                           ),
-//                           Text(
-//                             "(-85.00%)",
-//                             style: TextStyle(
-//                               color: Colors.redAccent,
-//                               fontSize: 12,
-//                             ),
-//                           ),
-//                         ],
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-
-//         const SizedBox(height: 16),
-
-//         // Bidding History and Property History Buttons
-//         Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 16),
-//           child: Row(
-//             children: [
-//               // Bidding History
-//               Expanded(
-//                 child: Buttonwidget(
-//                   text: "Bidding History",
-//                   borderColor: Colors.cyanAccent,
-//                   ontapped: () {
-//                     Navigator.push(
-//                       context,
-//                       MaterialPageRoute(
-//                         builder: (contex) => BiddingHistoryScreen(),
-//                       ),
-//                     );
-//                   },
-//                 ),
-//               ),
-
-//               const SizedBox(width: 8),
-
-//               // Property History
-//               Expanded(
-//                 child: Buttonwidget(
-//                   text: "Property History",
-//                   color: Colors.cyanAccent,
-//                   ontapped: () {
-//                     Navigator.push(
-//                       context,
-//                       MaterialPageRoute(
-//                         builder: (contex) => PropertyHistoryScreen(),
-//                       ),
-//                     );
-//                   },
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-
-//         const SizedBox(height: 16),
-//       ],
-//     );
-//   }
-// }

@@ -213,11 +213,13 @@ class LeaderboardScreen extends StatelessWidget {
               height: screenHeight * 0.01,
             ),
             SizedBox(width: screenWidth * 0.01),
-            Text(
-              "${user["time"]} mins",
-              style: TextStyle(
-                color: Colors.greenAccent,
-                fontSize: size * 0.17,
+            Flexible(
+              child: Text(
+                "${user["time"]} mins",
+                style: TextStyle(
+                  color: Colors.greenAccent,
+                  fontSize: size * 0.17,
+                ),
               ),
             ),
           ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:syntic_earth/controllers/payment_method_controller.dart';
 import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
@@ -12,8 +11,8 @@ class PaymentMethodsScreen extends StatelessWidget {
   PaymentMethodsScreen({super.key});
 
   final List<Map<String, String>> paymentMethods = [
-    {"name": "Credit Card", "icon": "assets/images/google.svg"},
-    {"name": "PayPal", "icon": "assets/images/apple.svg"},
+    {"name": "Credit Card", "icon": "assets/images/mastercard.svg"},
+    {"name": "PayPal", "icon": "assets/images/paypal.svg"},
     {"name": "Google Pay", "icon": "assets/images/google.svg"},
   ];
 
@@ -44,8 +43,8 @@ class PaymentMethodsScreen extends StatelessWidget {
                         children: [
                           SvgPicture.asset(
                             method["icon"]!,
-                            height: mediaQuery.height * 0.05,
-                            width: mediaQuery.width * 0.05,
+                            height: mediaQuery.height * 0.06,
+                            width: mediaQuery.width * 0.06,
                           ),
                           SizedBox(width: mediaQuery.width * 0.05),
                           Expanded(

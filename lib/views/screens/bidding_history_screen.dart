@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/bidding_history_card.dart';
 
@@ -67,13 +68,13 @@ class BiddingHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.bgColor,
 
       body: Column(
         children: [
           CustomWalletAppBar(
-            title: "Property History",
-            iconData: Icon(Icons.arrow_back_ios_new, color: Colors.white),
+            title: "Bidding History",
+            iconData: Icon(Icons.arrow_back_ios_new, color: AppColors.white),
           ),
           Expanded(
             child: ListView.builder(

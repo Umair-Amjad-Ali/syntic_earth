@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syntic_earth/controllers/utils/app_color.dart';
 
 class BiddingHistoryCard extends StatelessWidget {
   final String date;
@@ -23,7 +24,7 @@ class BiddingHistoryCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       decoration: BoxDecoration(
-        color: const Color(0xFF141424), // Main card background
+        color: AppColors.textFieldColor, // Main card background
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -33,7 +34,7 @@ class BiddingHistoryCard extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
             decoration: const BoxDecoration(
-              color: Color(0xFF2D2B50),
+              color: AppColors.secondaryColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(12),
                 topRight: Radius.circular(12),
@@ -44,12 +45,12 @@ class BiddingHistoryCard extends StatelessWidget {
               children: [
                 const Text(
                   'Date : ',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                  style: TextStyle(color: AppColors.white, fontSize: 14),
                 ),
                 Text(
                   date,
                   style: const TextStyle(
-                    color: Color(0xFF7D7DFF),
+                    color: AppColors.historyScreenTextColor,
                     fontSize: 14,
                   ),
                 ),
@@ -74,7 +75,7 @@ class BiddingHistoryCard extends StatelessWidget {
                       child: _buildLabelValuePair(
                         'Bid',
                         bid,
-                        valueColor: Colors.cyanAccent,
+                        valueColor: AppColors.primaryColor,
                       ),
                     ),
                     SizedBox(width: 20),
@@ -82,7 +83,7 @@ class BiddingHistoryCard extends StatelessWidget {
                       child: _buildLabelValuePair(
                         'Market Value',
                         marketValue,
-                        valueColor: Colors.cyanAccent,
+                        valueColor: AppColors.primaryColor,
                       ),
                     ),
                   ],
@@ -101,7 +102,7 @@ class BiddingHistoryCard extends StatelessWidget {
                       child: _buildLabelValuePair(
                         'Price',
                         price,
-                        valueColor: Colors.white70,
+                        valueColor: AppColors.textColor,
                       ),
                     ),
                     SizedBox(width: 20),
@@ -130,7 +131,7 @@ class BiddingHistoryCard extends StatelessWidget {
   Widget _buildLabelValuePair(
     String label,
     String value, {
-    Color valueColor = Colors.white,
+    Color valueColor = AppColors.textColor,
   }) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,7 +139,7 @@ class BiddingHistoryCard extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Colors.white,
+            color: AppColors.white,
             fontSize: 13,
             fontWeight: FontWeight.w700,
           ),
