@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:syntic_earth/controllers/payment_method_controller.dart';
 import 'package:syntic_earth/controllers/utils/app_color.dart';
+import 'package:syntic_earth/views/screens/payment_success_screen.dart';
 import 'package:syntic_earth/views/widgets/appbar/custom_wallet_appbar.dart';
 import 'package:syntic_earth/views/widgets/button.dart';
 import 'package:syntic_earth/views/widgets/textfield.dart';
@@ -76,7 +77,18 @@ class PaymentMethodsScreen extends StatelessWidget {
                 SizedBox(height: mediaQuery.height * 0.02),
                 Inputfield(hinttext: "CVV"),
                 SizedBox(height: mediaQuery.height * 0.02),
-                Buttonwidget(text: "Save", color: AppColors.primaryColor),
+                Buttonwidget(
+                  text: "Save",
+                  color: AppColors.primaryColor,
+                  ontapped: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PaymentSuccessScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),

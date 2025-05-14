@@ -40,6 +40,7 @@ dependencies:
   google_maps_flutter: ^2.12.1
   country_picker: ^2.0.27
   dropdown_button2: ^2.3.9
+  dotted_line: ^3.2.3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,7 @@ flutter:
     - assets/images/google.svg
     - assets/images/
     - assets/images/mastercard.svg
+    - assets/images/paymentCheck.svg
     - assets/images/apple.svg
     - assets/images/vector.png
     - assets/images/user.jpg

@@ -62,7 +62,6 @@ class CustomWalletAppBar extends StatelessWidget
               ),
             ),
           ),
-
           SizedBox(width: iconContainerSize, height: iconContainerSize),
         ],
       ),
